@@ -82,12 +82,23 @@
   }
 }
 
-.serenaImage img {
+.serenaImage {
   width: 100%;
   max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  margin: 0 auto;
+}
+
+.serenaImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .serenaText {
