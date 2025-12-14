@@ -38,7 +38,9 @@ const Footer = () => {
         </div>
 
         <div className={styles.copyright}>
-          <p>&copy; {SITE_INFO.year} {SITE_INFO.name}. Tutti i diritti riservati.</p>
+          <p className={styles.copyrightTagline}>Un progetto nato con amore</p>
+          <p>&copy; {SITE_INFO.year} {SITE_INFO.name}</p>
+          <p className={styles.copyrightSlogan}>Dove i piccoli diventano grandi sognatori</p>
         </div>
       </div>
     </footer>

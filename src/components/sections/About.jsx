@@ -19,10 +19,9 @@ const About = () => {
         <h2 className={styles.title}>Chi Siamo</h2>
 
         <p className={styles.intro}>
-          Il Cavalluccio Marino di Serena è un asilo nido familiare situato nel cuore di Lodi,
-          dove ogni bambino viene accolto con amore e attenzione personalizzata. Con anni di
-          esperienza nell'educazione infantile, offriamo un ambiente sicuro, stimolante e
-          accogliente dove i vostri piccoli possono crescere e imparare.
+          Il Cavalluccio Marino è un asilo nido famiglia situato a San Bernardo, Lodi,
+          dove ogni bambino è accolto come in famiglia.
+          Un nido piccolo, dove il tuo bambino è grande.
         </p>
 
         <div className={styles.valuesGrid}>
@@ -45,12 +44,15 @@ const About = () => {
             />
           </div>
           <div className={styles.serenaText}>
-            <h3 className={styles.serenaTitle}>Ciao, sono Serena!</h3>
+            <h3 className={styles.serenaTitle}>Ciao, sono Tata Serena!</h3>
             <p>
-              Da oltre 10 anni mi dedico con passione all'educazione dei bambini. Per me ogni
-              bambino è unico e merita attenzione personalizzata. Ho creato il Cavalluccio Marino
-              per offrire alle famiglie di Lodi un servizio flessibile, professionale e soprattutto...
-              pieno d'amore!
+              Con oltre 15 anni di esperienza nell'accudimento dei bambini,
+              ho creato questo nido famiglia per offrire un ambiente intimo,
+              dove i piccoli possono crescere con affetto e attenzioni personalizzate.
+            </p>
+            <p>
+              <strong>Solo 5 bambini alla volta</strong>, perché ognuno merita il meglio.
+              Qui non siete un numero, ma parte della nostra famiglia.
             </p>
           </div>
         </div>

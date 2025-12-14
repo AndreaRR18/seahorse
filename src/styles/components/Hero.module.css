@@ -3,7 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #023E8A 0%, #0077B6 25%, #00B4D8 50%, #48CAE4 75%, #90E0EF 100%);
+  background-image: url('https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -15,7 +18,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.15), transparent 60%);
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.85) 0%,
+    rgba(152, 255, 152, 0.75) 50%,
+    rgba(255, 182, 193, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
 
@@ -26,12 +45,39 @@
   padding: var(--spacing-md);
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.heroContent {
+  animation: fadeInScale 0.8s ease-out;
+}
+
 .heading {
   font-size: clamp(2rem, 6vw, 3.5rem);
   color: var(--color-white);
   margin-bottom: var(--spacing-md);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
   font-weight: 700;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .subheading {
@@ -40,4 +86,10 @@
   margin-bottom: var(--spacing-lg);
   font-weight: 400;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.heroContent button,
+.heroContent a {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
 }
