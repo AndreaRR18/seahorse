@@ -66,35 +66,35 @@ export const VALUES = [
 
 export const SERVICES = [
   {
-    title: "Cura Personalizzata",
+    title: "Cura e Attenzione",
     description:
-      "Attenzione individuale per ogni bambino basata su età, personalità e bisogni specifici.",
+      "Un massimo di 5 bambini alla volta, per garantire attenzione costante a ogni piccolo.",
     highlights: [
-      "Rapporto educatore-bambino ottimale",
-      "Programmi adattati all'età",
-      "Comunicazione quotidiana con i genitori",
+      "Cura personalizzata per ogni bambino",
+      "Diario dei ricordi settimanale per i genitori",
+      "Comunicazione continua su progressi e momenti speciali",
     ],
     image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&q=80&fit=crop",
   },
   {
-    title: "Attività Educative",
+    title: "Gioco e Apprendimento",
     description:
-      "Giochi e attività creative per stimolare la crescita cognitiva, emotiva e sociale.",
+      "Attività stimolanti in un ambiente sicuro e colorato, per crescere divertendosi.",
     highlights: [
       "Attività artistiche e creative",
       "Giochi sensoriali e motori",
-      "Lettura e musica quotidiana",
+      "Lettura e musica ogni giorno",
     ],
     image: "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?w=800&h=600&q=80&fit=crop",
   },
   {
-    title: "Orari Flessibili",
+    title: "Orari Pensati per Voi",
     description:
-      "Adattiamo gli orari alle vostre esigenze, con pacchetti personalizzati e servizio estivo.",
+      "Dal lunedì al venerdì, dalle 8:00 alle 17:30, con orari personalizzabili per le tue necessità.",
     highlights: [
+      "Orari flessibili per famiglie moderne",
       "Ingressi e uscite personalizzate",
-      "Pacchetti part-time disponibili",
-      "Servizio estivo",
+      "Servizio estivo disponibile",
     ],
     image: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&h=600&q=80&fit=crop",
   },
@@ -102,21 +102,21 @@ export const SERVICES = [
 
 export const TESTIMONIALS = [
   {
-    quote: "Serena ha trasformato l'esperienza del nido per nostra figlia. È sempre felice di andarci e torna a casa con un sorriso!",
-    name: "Maria R.",
-    role: "Mamma di Sofia, 2 anni",
+    quote: "Mio figlio ha trovato al Cavalluccio Marino un secondo casa. Tata Serena è attenta, paziente e sempre disponibile. Lo consiglio a tutti i genitori!",
+    name: "Mamma di Luca",
+    role: "2 anni",
     image: "https://i.pravatar.cc/150?img=1"
   },
   {
-    quote: "La flessibilità oraria è stata fondamentale per noi. Finalmente un nido che capisce le esigenze delle famiglie moderne.",
-    name: "Luca e Anna B.",
-    role: "Genitori di Marco, 18 mesi",
+    quote: "Finalmente un nido dove non sei un numero! Tata Serena conosce ogni bambino e segue i suoi progressi con amore. È come avere una nonna premurosa.",
+    name: "Papà di Emma",
+    role: "18 mesi",
     image: "https://i.pravatar.cc/150?img=5"
   },
   {
-    quote: "L'attenzione personalizzata fa davvero la differenza. Serena conosce nostro figlio come se fosse suo.",
-    name: "Giulia P.",
-    role: "Mamma di Matteo, 3 anni",
+    quote: "La flessibilità degli orari ci ha salvato! Tata Serena capisce le esigenze delle famiglie moderne. Mia figlia è felice e serena ogni giorno.",
+    name: "Mamma di Giulia",
+    role: "3 anni",
     image: "https://i.pravatar.cc/150?img=9"
   }
 ];
