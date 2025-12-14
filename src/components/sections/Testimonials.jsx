@@ -7,9 +7,9 @@ const Testimonials = () => {
   return (
     <SectionContainer id="testimonials" backgroundColor="var(--color-background)">
       <div className={styles.testimonialsContent}>
-        <h2 className={styles.title}>Cosa Dicono i Genitori</h2>
+        <h2 className={styles.title}>La Nostra Esperienza</h2>
         <p className={styles.subtitle}>
-          Le testimonianze delle famiglie che si affidano a noi
+          Cosa dicono le famiglie che si affidano a noi
         </p>
 
         <div className={styles.testimonialsGrid}>

@@ -10,9 +10,10 @@ const Contact = () => {
   return (
     <SectionContainer id="contact" backgroundColor="var(--color-white)">
       <div className={styles.contactContent}>
-        <h2 className={styles.title}>Contattaci</h2>
+        <h2 className={styles.title}>Vuoi conoscere il nostro nido?</h2>
         <p className={styles.subtitle}>
-          Siamo qui per rispondere a tutte le tue domande
+          Siamo a San Bernardo, Lodi. Scrivici su WhatsApp, chiamaci o vieni a trovarci!
+          Tata Serena è felice di rispondere a tutte le tue domande.
         </p>
 
         <div className={styles.contactGrid}>

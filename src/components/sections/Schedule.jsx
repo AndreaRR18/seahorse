@@ -8,7 +8,7 @@ const Schedule = () => {
   return (
     <SectionContainer id="schedule" backgroundColor="var(--color-background)">
       <div className={styles.scheduleContent}>
-        <h2 className={styles.title}>I Nostri Orari</h2>
+        <h2 className={styles.title}>Orari Pensati per le Famiglie Moderne</h2>
 
         <div className={styles.scheduleCard}>
           <div className={styles.iconWrapper}>

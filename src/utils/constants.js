@@ -13,9 +13,9 @@ export const CONTACT_INFO = {
 };
 
 export const SCHEDULE = {
-  days: "da Lunedì al Venerdì",
+  days: "Lunedì - Venerdì",
   hours: "8:00 - 17:30",
-  note: "Orari flessibili disponibili su richiesta",
+  note: "Orari personalizzabili per venire incontro alle esigenze di mamma e papà",
   closures: "Chiuso nei giorni festivi e nel mese di agosto",
 };
 
