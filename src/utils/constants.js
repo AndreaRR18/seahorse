@@ -27,7 +27,7 @@ export const SOCIAL_LINKS = {
 
 export const SITE_INFO = {
   name: "Cavalluccio Marino di Serena",
-  tagline: "Un nido accogliente dove ogni bambino è speciale",
+  tagline: "Un luogo sicuro, flessibile e pieno d'amore, per crescere sereni e felici",
   description:
     "Asilo nido familiare a Lodi con cura personalizzata, attività educative e orari flessibili.",
   year: new Date().getFullYear(),
@@ -43,24 +43,24 @@ export const NAV_ITEMS = [
 
 export const VALUES = [
   {
-    title: "Attenzione Personalizzata",
+    title: "Solo 5 Bambini",
     description:
-      "Ogni bambino riceve cure individuali e un'attenzione dedicata ai suoi bisogni unici.",
+      "Un massimo di 5 bambini per garantire a ognuno l'attenzione costante che merita.",
   },
   {
     title: "Flessibilità",
     description:
-      "Orari flessibili per le famiglie moderne, con ingressi e uscite personalizzate.",
+      "Orari personalizzabili pensati per le esigenze delle famiglie moderne.",
   },
   {
-    title: "Esperienza",
+    title: "Oltre 15 Anni di Esperienza",
     description:
-      "Anni di esperienza nell'educazione infantile con un approccio professionale e caloroso.",
+      "Tata Serena porta la sua lunga esperienza nell'accudimento dei bambini.",
   },
   {
-    title: "Ambiente Accogliente",
+    title: "Un Secondo Casa",
     description:
-      "Uno spazio caldo e familiare dove i bambini si sentono a casa.",
+      "Un ambiente intimo e familiare, lontano dallo stress dei grandi asili.",
   },
 ];
 
@@ -74,7 +74,7 @@ export const SERVICES = [
       "Programmi adattati all'età",
       "Comunicazione quotidiana con i genitori",
     ],
-    image: "https://placehold.co/800x600/ADD8E6/333?text=Cura+Personalizzata",
+    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&q=80&fit=crop",
   },
   {
     title: "Attività Educative",
@@ -85,7 +85,7 @@ export const SERVICES = [
       "Giochi sensoriali e motori",
       "Lettura e musica quotidiana",
     ],
-    image: "https://placehold.co/800x600/98FF98/333?text=Attivita+Educative",
+    image: "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?w=800&h=600&q=80&fit=crop",
   },
   {
     title: "Orari Flessibili",
@@ -96,6 +96,27 @@ export const SERVICES = [
       "Pacchetti part-time disponibili",
       "Servizio estivo",
     ],
-    image: "https://placehold.co/800x600/FFB6C1/333?text=Orari+Flessibili",
+    image: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&h=600&q=80&fit=crop",
   },
+];
+
+export const TESTIMONIALS = [
+  {
+    quote: "Serena ha trasformato l'esperienza del nido per nostra figlia. È sempre felice di andarci e torna a casa con un sorriso!",
+    name: "Maria R.",
+    role: "Mamma di Sofia, 2 anni",
+    image: "https://i.pravatar.cc/150?img=1"
+  },
+  {
+    quote: "La flessibilità oraria è stata fondamentale per noi. Finalmente un nido che capisce le esigenze delle famiglie moderne.",
+    name: "Luca e Anna B.",
+    role: "Genitori di Marco, 18 mesi",
+    image: "https://i.pravatar.cc/150?img=5"
+  },
+  {
+    quote: "L'attenzione personalizzata fa davvero la differenza. Serena conosce nostro figlio come se fosse suo.",
+    name: "Giulia P.",
+    role: "Mamma di Matteo, 3 anni",
+    image: "https://i.pravatar.cc/150?img=9"
+  }
 ];

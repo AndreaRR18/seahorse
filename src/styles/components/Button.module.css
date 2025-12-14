@@ -43,6 +43,25 @@
   color: var(--color-white);
 }
 
+.hero {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(255, 182, 193, 0.4);
+  border: 3px solid var(--color-white);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-xl);
+}
+
+.hero:hover {
+  box-shadow: 0 12px 32px rgba(255, 182, 193, 0.6);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.hero:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
 /* Sizes */
 .small {
   padding: var(--spacing-xs) var(--spacing-sm);

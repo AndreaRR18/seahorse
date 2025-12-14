@@ -10,14 +10,14 @@ const Hero = () => {
       <div className="container">
         <div className={styles.heroContent}>
           <h1 className={styles.heading}>
-            Benvenuti al {SITE_INFO.name}
+            Dove i piccoli diventano grandi sognatori
           </h1>
           <p className={styles.subheading}>
             {SITE_INFO.tagline}
           </p>
           <Link to="about" smooth={true} duration={500} offset={-80}>
-            <Button variant="primary" size="large">
-              Scopri di più
+            <Button variant="hero" size="large">
+              Scopri il Nostro Nido
             </Button>
           </Link>
         </div>

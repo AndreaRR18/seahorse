@@ -1,0 +1,113 @@
+.testimonialsContent {
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .testimonialsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonialsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonialCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  text-align: left;
+}
+
+.testimonialCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+}
+
+.testimonialCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quoteIcon {
+  font-size: 4rem;
+  color: var(--color-primary);
+  opacity: 0.2;
+  line-height: 0.5;
+  margin-bottom: var(--spacing-sm);
+  font-family: Georgia, serif;
+}
+
+.quote {
+  font-size: var(--font-size-md);
+  color: var(--color-text-dark);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.authorImage {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+}
+
+.authorInfo {
+  flex: 1;
+}
+
+.authorName {
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 2px;
+}
+
+.authorRole {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.consent {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-top: var(--spacing-xl);
+}
