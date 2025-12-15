@@ -1,8 +1,8 @@
 export const CONTACT_INFO = {
-  phone: "+39 123 456 7890",
-  phoneDisplay: "+39 123 456 7890",
-  email: "info@cavallucciomarino.com",
-  whatsapp: "https://wa.me/391234567890",
+  phone: "+39 345 4131977",
+  phoneDisplay: "+39 345 4131977",
+  email: "sere.massarani@gmail.com",
+  whatsapp: "https://wa.me/393454131977",
   address: {
     street: "Viale Calabria, 2B",
     city: "Lodi",
@@ -20,8 +20,8 @@ export const SCHEDULE = {
 };
 
 export const SOCIAL_LINKS = {
-  whatsapp: "https://wa.me/391234567890",
-  facebook: "", // Add if available
+  whatsapp: "https://wa.me/393454131977",
+  facebook: "https://www.facebook.com/nidocavallucciomarino/",
   instagram: "", // Add if available
 };
 

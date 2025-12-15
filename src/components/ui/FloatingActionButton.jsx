@@ -4,15 +4,7 @@ import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/FloatingActionButton.module.css';
 
 const FloatingActionButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 300);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [isVisible, setIsVisible] = useState(true);
 
   return (
     <a

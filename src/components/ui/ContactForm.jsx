@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from './Button';
+import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/ContactForm.module.css';
 
 const ContactForm = () => {
@@ -62,7 +63,7 @@ const ContactForm = () => {
     if (validateForm()) {
       // Since no backend, create WhatsApp link with pre-filled message
       const message = `Ciao! Sono ${formData.name}. ${formData.message}. Puoi contattarmi a: ${formData.email} o ${formData.phone}`;
-      const whatsappUrl = `https://wa.me/391234567890?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappUrl, '_blank');
 
@@ -139,7 +140,7 @@ const ContactForm = () => {
             value={formData.phone}
             onChange={handleChange}
             className={`${styles.input} ${errors.phone ? styles.inputError : ''}`}
-            placeholder="+39 123 456 7890"
+            placeholder={CONTACT_INFO.phoneDisplay}
             aria-required="true"
             aria-invalid={!!errors.phone}
             aria-describedby={errors.phone ? 'phone-error' : undefined}
