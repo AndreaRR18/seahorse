@@ -7,6 +7,7 @@ import type {
   Value,
   Service,
   Testimonial,
+  TrainingArea,
 } from "../types";
 
 export const CONTACT_INFO: ContactInfo = {
@@ -139,5 +140,83 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     name: "Mamma di Giulia",
     role: "3 anni",
     image: "https://i.pravatar.cc/150?img=9",
+  },
+] as const;
+
+export const TRAINING_AREAS: readonly TrainingArea[] = [
+  {
+    area: "Psicologica e Relazionale",
+    courses: [
+      {
+        title: "Il corpo in educazione e nella psicoterapia",
+        description:
+          "Formazione specialistica sulla centralità del corpo nei processi educativi e terapeutici, con focus sull'approccio psicoanalitico relazionale (SIPR - Società Italiana di Psicoanalisi della Relazione, Milano)",
+      },
+      {
+        title: "Il potere della comunicazione non verbale",
+        description:
+          "Approfondimento sulle dinamiche comunicative oltre le parole: linguaggio del corpo, prossemica e gestualità nella relazione educativa",
+      },
+      {
+        title: "Psicologia perinatale",
+        description:
+          "Introduzione ai processi psicologici che accompagnano gravidanza, parto e primi mesi di vita, con attenzione al benessere della diade madre-bambino",
+      },
+      {
+        title: "Il distacco dalla mamma e il legame di attaccamento",
+        description:
+          "Studio delle fasi di separazione e delle dinamiche di attaccamento secondo le principali teorie evolutive, con strategie di accompagnamento per bambini e famiglie",
+      },
+    ],
+  },
+  {
+    area: "Pedagogica e Metodologica",
+    courses: [
+      {
+        title: "Metodo Montessori",
+        description:
+          "Principi e applicazioni pratiche della pedagogia montessoriana: ambiente preparato, materiali strutturati e ruolo dell'educatore come facilitatore dell'autonomia",
+      },
+      {
+        title: "La scelta dei colori nella psicomotricità",
+        description:
+          "Utilizzo consapevole del colore come strumento espressivo e terapeutico nelle attività psicomotorie infantili",
+      },
+      {
+        title: 'La gestione del sonno nei bambini: "Per dormire sonni tranquilli"',
+        description:
+          "Strategie evidence-based per favorire un corretto ritmo sonno-veglia e affrontare le principali difficoltà del sonno in età evolutiva",
+      },
+    ],
+  },
+  {
+    area: "Tecnico-Professionale",
+    courses: [
+      {
+        title: "Animatore per ludoteca",
+        description:
+          "Corso di qualifica professionale per la conduzione di attività ludico-ricreative in contesti educativi (DDT - Divulgazione Dinamica)",
+      },
+      {
+        title: "Primo soccorso pediatrico",
+        description:
+          "Tecniche di intervento in situazioni di emergenza con lattanti e bambini: manovre di disostruzione, rianimazione cardiopolmonare e gestione delle urgenze più comuni",
+      },
+      {
+        title: "HACCP - Sicurezza alimentare",
+        description:
+          "Normativa e procedure per la corretta manipolazione degli alimenti in ambito educativo (docente: Grazia Gabbini, Tecnologo Alimentare)",
+      },
+    ],
+  },
+  {
+    area: "Progettuale",
+    courses: [
+      {
+        title: "Introduzione alla progettazione sociale",
+        description:
+          "Metodologie per l'ideazione, la scrittura e la valutazione di progetti in ambito educativo e socio-assistenziale",
+      },
+    ],
   },
 ] as const;

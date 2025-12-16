@@ -1,0 +1,143 @@
+.trainingContent {
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: 1.8;
+}
+
+.areasContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.areaCard {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.areaCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.areaHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+  text-align: left;
+}
+
+.areaHeader:hover {
+  background-color: var(--color-background);
+}
+
+.areaHeader:focus {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.areaTitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-dark);
+  margin: 0;
+  font-weight: 600;
+}
+
+.chevron {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+  margin-left: var(--spacing-sm);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.areaContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal) ease;
+}
+
+.contentOpen {
+  max-height: 2000px;
+}
+
+.coursesList {
+  list-style: none;
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  margin: 0;
+  text-align: left;
+}
+
+.courseItem {
+  position: relative;
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.courseItem::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+}
+
+.courseTitle {
+  font-size: var(--font-size-md);
+  color: var(--color-text-dark);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.4;
+}
+
+.courseDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .areaTitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .areaHeader {
+    padding: var(--spacing-sm);
+  }
+
+  .coursesList {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+  }
+
+  .courseItem {
+    padding-left: var(--spacing-sm);
+  }
+}

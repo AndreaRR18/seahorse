@@ -111,3 +111,14 @@ export interface SectionContainerProps {
   children: React.ReactNode;
   className?: string;
 }
+
+// Training Types
+export interface Course {
+  title: string;
+  description: string;
+}
+
+export interface TrainingArea {
+  area: string;
+  courses: Course[];
+}
