@@ -29,7 +29,7 @@ const ContactForm: React.FC = () => {
     }
 
     // Phone validation (Italian format)
-    const phoneRegex = /^[\d\s\+\-\(\)]{8,}$/;
+    const phoneRegex = /^[\d\s+\-()]{8,}$/;
     if (!formData.phone.trim() || !phoneRegex.test(formData.phone)) {
       newErrors.phone = 'Inserisci un numero di telefono valido';
     }
