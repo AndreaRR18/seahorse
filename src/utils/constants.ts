@@ -15,6 +15,7 @@ export const CONTACT_INFO: ContactInfo = {
   phoneDisplay: "+39 345 4131977",
   email: "sere.massarani@gmail.com",
   whatsapp: "https://wa.me/393454131977",
+  facebook: "https://www.facebook.com/nidocavallucciomarino/?locale=it_IT",
   address: {
     street: "Viale Calabria, 2B",
     city: "Lodi",

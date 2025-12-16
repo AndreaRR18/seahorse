@@ -12,6 +12,7 @@ export interface ContactInfo {
   phoneDisplay: string;
   email: string;
   whatsapp: string;
+  facebook: string;
   address: Address;
 }
 
