@@ -31,12 +31,15 @@
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-sm);
   color: var(--color-text-dark);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
 }
 
 .description {
   color: var(--color-text-light);
   margin-bottom: var(--spacing-sm);
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
 }
 
 .highlights {
@@ -52,6 +55,8 @@
   margin-bottom: var(--spacing-xs);
   color: var(--color-text-light);
   font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
 }
 
 .highlight::before {

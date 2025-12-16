@@ -6,6 +6,9 @@
   font-size: clamp(2rem, 4vw, 2.5rem);
   color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 .subtitle {
@@ -13,6 +16,8 @@
   color: var(--color-text-light);
   max-width: 700px;
   margin: 0 auto var(--spacing-xl);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
 }
 
 .servicesGrid {
