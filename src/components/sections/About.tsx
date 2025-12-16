@@ -46,7 +46,7 @@ const About: React.FC = () => {
           <div className={styles.serenaImage}>
             <img
               src="assets/tata_baby_cap.jpeg"
-              alt="Tata Serena, educatrice con oltre 15 anni di esperienza nell'accudimento dei bambini"
+              alt="Tata Serena, educatrice di esperienza nell'accudimento dei bambini"
               loading="lazy"
             />
           </div>

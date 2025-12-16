@@ -7,7 +7,7 @@ import type {
   Value,
   Service,
   Testimonial,
-} from '../types';
+} from "../types";
 
 export const CONTACT_INFO: ContactInfo = {
   phone: "+39 345 4131977",
@@ -38,7 +38,8 @@ export const SOCIAL_LINKS: SocialLinks = {
 
 export const SITE_INFO: SiteInfo = {
   name: "Cavalluccio Marino di Serena",
-  tagline: "Un luogo sicuro, flessibile e pieno d'amore, per crescere sereni e felici",
+  tagline:
+    "Un luogo sicuro, flessibile e pieno d'amore, per crescere sereni e felici",
   description:
     "Asilo nido familiare a Lodi con cura personalizzata, attività educative e orari flessibili.",
   year: new Date().getFullYear(),
@@ -64,7 +65,7 @@ export const VALUES: readonly Value[] = [
       "Orari personalizzabili pensati per le esigenze delle famiglie moderne.",
   },
   {
-    title: "Oltre 15 Anni di Esperienza",
+    title: "Aperta dal 2012",
     description:
       "Tata Serena porta la sua lunga esperienza nell'accudimento dei bambini.",
   },
@@ -86,7 +87,8 @@ export const SERVICES: readonly Service[] = [
       "Comunicazione continua su progressi e momenti speciali",
       "Ambiente sicuro e accogliente",
     ],
-    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&q=80&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&q=80&fit=crop",
   },
   {
     title: "Attività Educative e Creative",
@@ -98,7 +100,8 @@ export const SERVICES: readonly Service[] = [
       "Lettura e musica ogni giorno",
       "Attività all'aperto e gioco libero",
     ],
-    image: "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?w=800&h=600&q=80&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?w=800&h=600&q=80&fit=crop",
   },
   {
     title: "Orari Flessibili per Famiglie Moderne",
@@ -110,27 +113,31 @@ export const SERVICES: readonly Service[] = [
       "Servizio estivo disponibile",
       "Inserimento graduale per i bambini",
     ],
-    image: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&h=600&q=80&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&h=600&q=80&fit=crop",
   },
 ] as const;
 
 export const TESTIMONIALS: readonly Testimonial[] = [
   {
-    quote: "Mio figlio ha trovato al Cavalluccio Marino un secondo casa. Tata Serena è attenta, paziente e sempre disponibile. Lo consiglio a tutti i genitori!",
+    quote:
+      "Mio figlio ha trovato al Cavalluccio Marino un secondo casa. Tata Serena è attenta, paziente e sempre disponibile. Lo consiglio a tutti i genitori!",
     name: "Mamma di Luca",
     role: "2 anni",
-    image: "https://i.pravatar.cc/150?img=1"
+    image: "https://i.pravatar.cc/150?img=1",
   },
   {
-    quote: "Finalmente un nido dove non sei un numero! Tata Serena conosce ogni bambino e segue i suoi progressi con amore. È come avere una nonna premurosa.",
+    quote:
+      "Finalmente un nido dove non sei un numero! Tata Serena conosce ogni bambino e segue i suoi progressi con amore. È come avere una nonna premurosa.",
     name: "Papà di Emma",
     role: "18 mesi",
-    image: "https://i.pravatar.cc/150?img=5"
+    image: "https://i.pravatar.cc/150?img=5",
   },
   {
-    quote: "La flessibilità degli orari ci ha salvato! Tata Serena capisce le esigenze delle famiglie moderne. Mia figlia è felice e serena ogni giorno.",
+    quote:
+      "La flessibilità degli orari ci ha salvato! Tata Serena capisce le esigenze delle famiglie moderne. Mia figlia è felice e serena ogni giorno.",
     name: "Mamma di Giulia",
     role: "3 anni",
-    image: "https://i.pravatar.cc/150?img=9"
-  }
+    image: "https://i.pravatar.cc/150?img=9",
+  },
 ] as const;
