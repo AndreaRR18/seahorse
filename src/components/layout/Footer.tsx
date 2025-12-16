@@ -3,6 +3,11 @@ import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa'
 import { CONTACT_INFO, SITE_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Footer.module.css';
 
+/**
+ * Footer component - Website footer with contact and copyright information
+ * Displays business info, contact links, address, and copyright
+ * @returns React component for footer
+ */
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>

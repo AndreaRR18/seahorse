@@ -5,6 +5,11 @@ import { SITE_INFO } from '../../utils/constants';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from '../../styles/components/Header.module.css';
 
+/**
+ * Header component - Website header with navigation
+ * Displays logo, navigation menu, and mobile menu toggle
+ * @returns React component for header
+ */
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);

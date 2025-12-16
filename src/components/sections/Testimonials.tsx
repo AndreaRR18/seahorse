@@ -3,6 +3,11 @@ import SectionContainer from '../ui/SectionContainer';
 import { TESTIMONIALS } from '../../utils/constants';
 import styles from '../../styles/components/Testimonials.module.css';
 
+/**
+ * Testimonials component - Displays customer testimonials
+ * Shows quotes from parents about their experience
+ * @returns React component for testimonials section
+ */
 const Testimonials: React.FC = () => {
   return (
     <SectionContainer id="testimonials" backgroundColor="var(--color-background)">

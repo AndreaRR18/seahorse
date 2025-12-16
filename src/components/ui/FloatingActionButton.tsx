@@ -3,6 +3,11 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/FloatingActionButton.module.css';
 
+/**
+ * FloatingActionButton component for WhatsApp contact
+ * Displays a floating button that links to WhatsApp
+ * @returns React component for floating action button
+ */
 const FloatingActionButton: React.FC = () => {
   const [isVisible] = useState<boolean>(true);
 

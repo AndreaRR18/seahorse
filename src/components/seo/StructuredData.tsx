@@ -1,6 +1,11 @@
 import React from 'react';
 import { CONTACT_INFO, SITE_INFO } from '@utils/constants';
 
+/**
+ * StructuredData component - Injects schema markup for SEO
+ * Adds Organization, LocalBusiness, Service, WebPage, and Breadcrumb schemas
+ * @returns React component with schema markup scripts
+ */
 const StructuredData: React.FC = () => {
   const organizationSchema = {
     "@context": "https://schema.org",

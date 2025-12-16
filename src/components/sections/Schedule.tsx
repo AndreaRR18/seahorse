@@ -4,6 +4,11 @@ import { FaClock } from 'react-icons/fa';
 import { SCHEDULE } from '../../utils/constants';
 import styles from '../../styles/components/Schedule.module.css';
 
+/**
+ * Schedule component - Displays daycare operating hours and availability
+ * Shows days, hours, and flexible scheduling information
+ * @returns React component for schedule section
+ */
 const Schedule: React.FC = () => {
   return (
     <SectionContainer id="schedule" backgroundColor="var(--color-background)">

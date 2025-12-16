@@ -4,6 +4,11 @@ import Button from '../ui/Button';
 import { SITE_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Hero.module.css';
 
+/**
+ * Hero component - Main landing section with call-to-action
+ * Displays the main heading, subheading, and primary CTA button
+ * @returns React component for hero section
+ */
 const Hero: React.FC = () => {
   return (
     <section id="home" className={styles.hero}>

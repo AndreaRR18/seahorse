@@ -2,6 +2,15 @@ import React from 'react';
 import type { CardProps } from '../../types';
 import styles from '../../styles/components/Card.module.css';
 
+/**
+ * Card component for displaying service information
+ * @param {string} [image] - Optional image URL
+ * @param {string} [title] - Card title
+ * @param {string} [description] - Card description
+ * @param {string[]} [highlights] - List of highlight features
+ * @param {string} [className] - Additional CSS classes
+ * @returns React component for card
+ */
 const Card: React.FC<CardProps> = ({ image, title, description, highlights, className = '' }) => {
   return (
     <div className={`${styles.card} ${className}`}>

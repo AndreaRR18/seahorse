@@ -11,6 +11,11 @@ const iconMap: Record<number, React.ReactElement> = {
   3: <FaHome />
 };
 
+/**
+ * About component - Information about the daycare and its values
+ * Displays introduction, values, and information about Tata Serena
+ * @returns React component for about section
+ */
 const About: React.FC = () => {
   return (
     <SectionContainer id="about" backgroundColor="var(--color-background)">

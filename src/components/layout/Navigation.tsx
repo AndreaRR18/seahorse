@@ -4,6 +4,13 @@ import { NAV_ITEMS } from '../../utils/constants';
 import type { NavigationProps } from '../../types';
 import styles from '../../styles/components/Navigation.module.css';
 
+/**
+ * Navigation component - Website navigation menu
+ * Displays navigation links for scrolling to sections
+ * @param {boolean} isMobile - Whether navigation is for mobile view
+ * @param {function} [closeMenu] - Function to close mobile menu
+ * @returns React component for navigation
+ */
 const Navigation: React.FC<NavigationProps> = ({ isMobile, closeMenu }) => {
   return (
     <nav className={isMobile ? styles.mobileNav : styles.desktopNav}>

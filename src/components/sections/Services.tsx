@@ -4,6 +4,11 @@ import Card from '../ui/Card';
 import { SERVICES } from '../../utils/constants';
 import styles from '../../styles/components/Services.module.css';
 
+/**
+ * Services component - Displays the daycare services offered
+ * Shows three service cards with descriptions and highlights
+ * @returns React component for services section
+ */
 const Services: React.FC = () => {
   return (
     <SectionContainer id="services" backgroundColor="var(--color-white)">

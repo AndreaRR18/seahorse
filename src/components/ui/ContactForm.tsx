@@ -4,6 +4,11 @@ import { CONTACT_INFO } from '../../utils/constants';
 import type { ContactFormData, FormErrors } from '../../types';
 import styles from '../../styles/components/ContactForm.module.css';
 
+/**
+ * ContactForm component for user inquiries
+n * Collects user information and sends it via WhatsApp
+ * @returns React component for contact form
+ */
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',

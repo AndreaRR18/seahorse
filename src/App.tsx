@@ -11,6 +11,11 @@ import Location from './components/sections/Location';
 import FloatingActionButton from './components/ui/FloatingActionButton';
 import './App.css';
 
+/**
+ * Main App component - Root component of the application
+ * Renders the complete page structure with header, sections, and footer
+ * @returns React component for the entire application
+ */
 const App: React.FC = () => {
   return (
     <div className="app">

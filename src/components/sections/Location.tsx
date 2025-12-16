@@ -3,6 +3,11 @@ import SectionContainer from '../ui/SectionContainer';
 import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Location.module.css';
 
+/**
+ * Location component - Displays daycare address and map
+ * Shows physical address and embedded Google Maps
+ * @returns React component for location section
+ */
 const Location: React.FC = () => {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     `${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}, Italy`

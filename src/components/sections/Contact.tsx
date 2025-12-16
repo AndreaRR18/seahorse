@@ -5,6 +5,11 @@ import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Contact.module.css';
 
+/**
+ * Contact component - Displays contact information and form
+ * Shows phone, email, WhatsApp, and contact form for inquiries
+ * @returns React component for contact section
+ */
 const Contact: React.FC = () => {
   return (
     <SectionContainer id="contact" backgroundColor="var(--color-white)">
