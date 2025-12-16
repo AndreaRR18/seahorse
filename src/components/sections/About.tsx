@@ -3,7 +3,6 @@ import SectionContainer from '../ui/SectionContainer';
 import { FaHeart, FaClock, FaStar, FaHome } from 'react-icons/fa';
 import { VALUES } from '../../utils/constants';
 import styles from '../../styles/components/About.module.css';
-import serenaImage from '/public/assets/tata-serena.jpg';
 
 const iconMap: Record<number, React.ReactElement> = {
   0: <FaHeart />,
@@ -39,7 +38,7 @@ const About: React.FC = () => {
         <div className={styles.serenaSection}>
           <div className={styles.serenaImage}>
             <img
-              src={serenaImage}
+              src="/assets/tata-serena.jpg"
               alt="Tata Serena"
             />
           </div>
