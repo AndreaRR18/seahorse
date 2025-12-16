@@ -15,14 +15,11 @@ const Hero: React.FC = () => {
       <div className="container">
         <div className={styles.heroContent}>
           <h1 className={styles.heading}>
-            Asilo Nido Famiglia a Lodi - Solo 5 Bambini
+            Asilo Nido Cavalluccio Marino
           </h1>
           <p className={styles.subheading}>
             {SITE_INFO.tagline}
           </p>
-          <div className={styles.heroDescription}>
-            <p>Cura personalizzata, attività educative e orari flessibili per le famiglie di Lodi e dintorni.</p>
-          </div>
           <Link to="about" smooth={true} duration={500} offset={-80}>
             <Button variant="hero" size="large">
               Scopri il Nostro Nido
