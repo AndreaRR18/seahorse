@@ -88,8 +88,7 @@ export const SERVICES: readonly Service[] = [
       "Comunicazione continua su progressi e momenti speciali",
       "Ambiente sicuro e accogliente",
     ],
-    image:
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&q=80&fit=crop",
+    image: "/seahorse/assets/tata_baby_hand_color.jpeg",
   },
   {
     title: "Attività Educative e Creative",
@@ -101,8 +100,7 @@ export const SERVICES: readonly Service[] = [
       "Lettura e musica ogni giorno",
       "Attività all'aperto e gioco libero",
     ],
-    image:
-      "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?w=800&h=600&q=80&fit=crop",
+    image: "/seahorse/assets/baby_montessory.jpeg",
   },
   {
     title: "Orari Flessibili per Famiglie Moderne",
@@ -114,8 +112,7 @@ export const SERVICES: readonly Service[] = [
       "Servizio estivo disponibile",
       "Inserimento graduale per i bambini",
     ],
-    image:
-      "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&h=600&q=80&fit=crop",
+    image: "/seahorse/assets/family_daycare.jpg",
   },
 ] as const;
 
