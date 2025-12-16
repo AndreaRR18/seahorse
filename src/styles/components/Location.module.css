@@ -8,6 +8,13 @@
   margin-bottom: var(--spacing-sm);
 }
 
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
 .address {
   font-size: var(--font-size-lg);
   color: var(--color-text-light);

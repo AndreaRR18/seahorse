@@ -11,8 +11,9 @@ const Contact: React.FC = () => {
       <div className={styles.contactContent}>
         <h2 className={styles.title}>Vuoi conoscere il nostro nido?</h2>
         <p className={styles.subtitle}>
-          Siamo a San Bernardo, Lodi. Scrivici su WhatsApp, chiamaci o vieni a trovarci!
-          Tata Serena è felice di rispondere a tutte le tue domande.
+          Siamo a San Bernardo, Lodi. Scrivici su WhatsApp, chiamaci o vieni a trovarci per una visita!
+          Tata Serena è felice di rispondere a tutte le tue domande e farti visitare il nostro asilo nido.
+          Offriamo orari flessibili per le visite e inserimenti graduali per i bambini.
         </p>
 
         <div className={styles.contactGrid}>

@@ -7,7 +7,7 @@ const Card: React.FC<CardProps> = ({ image, title, description, highlights, clas
     <div className={`${styles.card} ${className}`}>
       {image && (
         <div className={styles.imageWrapper}>
-          <img src={image} alt={title} className={styles.image} />
+          <img src={image} alt={title} className={styles.image} loading="lazy" />
         </div>
       )}
       <div className={styles.content}>

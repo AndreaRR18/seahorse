@@ -19,8 +19,11 @@ const About: React.FC = () => {
 
         <p className={styles.intro}>
           Il Cavalluccio Marino è un asilo nido famiglia situato a San Bernardo, Lodi,
-          dove ogni bambino è accolto come in famiglia.
-          Un nido piccolo, dove il tuo bambino è grande.
+          dove ogni bambino è accolto come in famiglia. Con un massimo di 5 bambini alla volta,
+          offriamo un ambiente intimo e sicuro, dove ogni piccolo riceve attenzione personalizzata
+          e cresce con amore e cura. Siamo specializzati nell'accudimento di bambini da 0 a 3 anni,
+          con attività educative, gioco libero e inserimento graduale per garantire un'esperienza
+          serena e positiva per i piccoli e le loro famiglie.
         </p>
 
         <div className={styles.valuesGrid}>
@@ -39,7 +42,8 @@ const About: React.FC = () => {
           <div className={styles.serenaImage}>
             <img
               src="/assets/tata-serena.jpg"
-              alt="Tata Serena"
+              alt="Tata Serena, educatrice con oltre 15 anni di esperienza nell'accudimento dei bambini"
+              loading="lazy"
             />
           </div>
           <div className={styles.serenaText}>

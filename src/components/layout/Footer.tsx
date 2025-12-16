@@ -11,6 +11,7 @@ const Footer: React.FC = () => {
           <div className={styles.footerSection}>
             <h3 className={styles.footerTitle}>{SITE_INFO.name}</h3>
             <p className={styles.footerTagline}>{SITE_INFO.tagline}</p>
+            <p className={styles.footerDescription}>Asilo nido famiglia a Lodi con cura personalizzata per massimo 5 bambini</p>
           </div>
 
           <div className={styles.footerSection}>

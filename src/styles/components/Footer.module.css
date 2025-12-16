@@ -31,6 +31,13 @@
 .footerTagline {
   color: var(--color-text-light);
   font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.footerDescription {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
 }
 
 .sectionTitle {

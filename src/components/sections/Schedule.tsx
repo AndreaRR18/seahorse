@@ -9,6 +9,10 @@ const Schedule: React.FC = () => {
     <SectionContainer id="schedule" backgroundColor="var(--color-background)">
       <div className={styles.scheduleContent}>
         <h2 className={styles.title}>Orari Pensati per le Famiglie Moderne</h2>
+        <p className={styles.subtitle}>
+          Orari flessibili per venire incontro alle esigenze di mamma e papà. Contattaci per personalizzare
+          gli orari in base alle tue necessità lavorative e familiari.
+        </p>
 
         <div className={styles.scheduleCard}>
           <div className={styles.iconWrapper}>

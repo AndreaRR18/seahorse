@@ -77,35 +77,38 @@ export const VALUES: readonly Value[] = [
 
 export const SERVICES: readonly Service[] = [
   {
-    title: "Cura e Attenzione",
+    title: "Cura e Attenzione Personalizzata",
     description:
-      "Un massimo di 5 bambini alla volta, per garantire attenzione costante a ogni piccolo.",
+      "Un massimo di 5 bambini alla volta, per garantire attenzione costante a ogni piccolo. Ogni bambino è seguito individualmente con un diario dei ricordi settimanale per i genitori.",
     highlights: [
       "Cura personalizzata per ogni bambino",
       "Diario dei ricordi settimanale per i genitori",
       "Comunicazione continua su progressi e momenti speciali",
+      "Ambiente sicuro e accogliente",
     ],
     image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&q=80&fit=crop",
   },
   {
-    title: "Gioco e Apprendimento",
+    title: "Attività Educative e Creative",
     description:
-      "Attività stimolanti in un ambiente sicuro e colorato, per crescere divertendosi.",
+      "Attività stimolanti in un ambiente sicuro e colorato, per crescere divertendosi. Approccio Montessori-inspired per lo sviluppo cognitivo e motorio.",
     highlights: [
       "Attività artistiche e creative",
       "Giochi sensoriali e motori",
       "Lettura e musica ogni giorno",
+      "Attività all'aperto e gioco libero",
     ],
     image: "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?w=800&h=600&q=80&fit=crop",
   },
   {
-    title: "Orari Pensati per Voi",
+    title: "Orari Flessibili per Famiglie Moderne",
     description:
-      "Dal lunedì al venerdì, dalle 8:00 alle 17:30, con orari personalizzabili per le tue necessità.",
+      "Dal lunedì al venerdì, dalle 8:00 alle 17:30, con orari personalizzabili per le tue necessità. Inserimento graduale per i piccoli e servizio estivo disponibile.",
     highlights: [
       "Orari flessibili per famiglie moderne",
       "Ingressi e uscite personalizzate",
       "Servizio estivo disponibile",
+      "Inserimento graduale per i bambini",
     ],
     image: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&h=600&q=80&fit=crop",
   },
