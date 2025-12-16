@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { NAV_ITEMS } from '../../utils/constants';
+import type { NavigationProps } from '../../types';
 import styles from '../../styles/components/Navigation.module.css';
 
-const Navigation = ({ isMobile, closeMenu }) => {
+const Navigation: React.FC<NavigationProps> = ({ isMobile, closeMenu }) => {
   return (
     <nav className={isMobile ? styles.mobileNav : styles.desktopNav}>
       <ul className={styles.navList}>
@@ -17,7 +18,7 @@ const Navigation = ({ isMobile, closeMenu }) => {
               duration={500}
               activeClass={styles.active}
               className={styles.navLink}
-              onClick={() => isMobile && closeMenu && closeMenu()}
+              onClick={() => isMobile && closeMenu?.()}
             >
               {item.label}
             </Link>

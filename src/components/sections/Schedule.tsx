@@ -4,7 +4,7 @@ import { FaClock } from 'react-icons/fa';
 import { SCHEDULE } from '../../utils/constants';
 import styles from '../../styles/components/Schedule.module.css';
 
-const Schedule = () => {
+const Schedule: React.FC = () => {
   return (
     <SectionContainer id="schedule" backgroundColor="var(--color-background)">
       <div className={styles.scheduleContent}>

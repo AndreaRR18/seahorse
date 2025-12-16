@@ -4,7 +4,7 @@ import Button from '../ui/Button';
 import { SITE_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Hero.module.css';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section id="home" className={styles.hero}>
       <div className="container">

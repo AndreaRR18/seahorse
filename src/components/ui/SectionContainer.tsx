@@ -1,8 +1,9 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+import type { SectionContainerProps } from '../../types';
 import styles from '../../styles/components/SectionContainer.module.css';
 
-const SectionContainer = ({
+const SectionContainer: React.FC<SectionContainerProps> = ({
   id,
   backgroundColor,
   children,

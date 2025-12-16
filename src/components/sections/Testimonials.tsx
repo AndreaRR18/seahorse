@@ -3,7 +3,7 @@ import SectionContainer from '../ui/SectionContainer';
 import { TESTIMONIALS } from '../../utils/constants';
 import styles from '../../styles/components/Testimonials.module.css';
 
-const Testimonials = () => {
+const Testimonials: React.FC = () => {
   return (
     <SectionContainer id="testimonials" backgroundColor="var(--color-background)">
       <div className={styles.testimonialsContent}>
@@ -14,7 +14,7 @@ const Testimonials = () => {
 
         <div className={styles.testimonialsGrid}>
           {TESTIMONIALS.map((testimonial, index) => (
-            <div key={index} className={styles.testimonialCard}>
+            <div key={`testimonial-${index}`} className={styles.testimonialCard}>
               <div className={styles.quoteIcon}>"</div>
               <p className={styles.quote}>{testimonial.quote}</p>
               <div className={styles.author}>

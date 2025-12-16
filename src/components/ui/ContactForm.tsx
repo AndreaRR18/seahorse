@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Button from './Button';
 import { CONTACT_INFO } from '../../utils/constants';
+import type { ContactFormData, FormErrors } from '../../types';
 import styles from '../../styles/components/ContactForm.module.css';
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
-  const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitted, setSubmitted] = useState<boolean>(false);
 
-  const validateForm = () => {
-    const newErrors = {};
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
 
     // Name validation
     if (!formData.name.trim() || formData.name.trim().length < 2) {
@@ -42,14 +43,14 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
     // Clear error when user starts typing
-    if (errors[name]) {
+    if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({
         ...prev,
         [name]: ''
@@ -57,7 +58,7 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     if (validateForm()) {
@@ -164,7 +165,7 @@ const ContactForm = () => {
           onChange={handleChange}
           className={`${styles.textarea} ${errors.message ? styles.inputError : ''}`}
           placeholder="Come possiamo aiutarti?"
-          rows="5"
+          rows={5}
           aria-required="true"
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? 'message-error' : undefined}

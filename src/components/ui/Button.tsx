@@ -1,7 +1,8 @@
 import React from 'react';
+import type { ButtonProps } from '../../types';
 import styles from '../../styles/components/Button.module.css';
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
   size = 'medium',
@@ -10,7 +11,9 @@ const Button = ({
   type = 'button',
   className = ''
 }) => {
-  const classes = `${styles.button} ${styles[variant]} ${styles[size]} ${className}`;
+  const variantClass = styles[variant] ?? '';
+  const sizeClass = styles[size] ?? '';
+  const classes = `${styles.button} ${variantClass} ${sizeClass} ${className}`;
 
   if (href) {
     return (

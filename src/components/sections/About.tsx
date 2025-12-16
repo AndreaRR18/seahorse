@@ -5,14 +5,14 @@ import { VALUES } from '../../utils/constants';
 import styles from '../../styles/components/About.module.css';
 import serenaImage from '/public/assets/tata-serena.jpg';
 
-const iconMap = {
+const iconMap: Record<number, React.ReactElement> = {
   0: <FaHeart />,
   1: <FaClock />,
   2: <FaStar />,
   3: <FaHome />
 };
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <SectionContainer id="about" backgroundColor="var(--color-background)">
       <div className={styles.aboutContent}>
@@ -26,7 +26,7 @@ const About = () => {
 
         <div className={styles.valuesGrid}>
           {VALUES.map((value, index) => (
-            <div key={index} className={styles.valueCard}>
+            <div key={`value-${index}`} className={styles.valueCard}>
               <div className={styles.iconWrapper}>
                 {iconMap[index]}
               </div>

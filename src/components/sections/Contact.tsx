@@ -1,12 +1,11 @@
 import React from 'react';
 import SectionContainer from '../ui/SectionContainer';
-import Button from '../ui/Button';
 import ContactForm from '../ui/ContactForm';
 import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Contact.module.css';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <SectionContainer id="contact" backgroundColor="var(--color-white)">
       <div className={styles.contactContent}>

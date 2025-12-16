@@ -4,7 +4,7 @@ import Card from '../ui/Card';
 import { SERVICES } from '../../utils/constants';
 import styles from '../../styles/components/Services.module.css';
 
-const Services = () => {
+const Services: React.FC = () => {
   return (
     <SectionContainer id="services" backgroundColor="var(--color-white)">
       <div className={styles.servicesContent}>
@@ -16,7 +16,7 @@ const Services = () => {
         <div className={styles.servicesGrid}>
           {SERVICES.map((service, index) => (
             <Card
-              key={index}
+              key={`service-${index}`}
               image={service.image}
               title={service.title}
               description={service.description}

@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa'
 import { CONTACT_INFO, SITE_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Footer.module.css';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className="container">

@@ -3,7 +3,7 @@ import SectionContainer from '../ui/SectionContainer';
 import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Location.module.css';
 
-const Location = () => {
+const Location: React.FC = () => {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     `${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}, Italy`
   )}&output=embed`;

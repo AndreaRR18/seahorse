@@ -1,4 +1,15 @@
-export const CONTACT_INFO = {
+import type {
+  ContactInfo,
+  Schedule,
+  SocialLinks,
+  SiteInfo,
+  NavItem,
+  Value,
+  Service,
+  Testimonial,
+} from '../types';
+
+export const CONTACT_INFO: ContactInfo = {
   phone: "+39 345 4131977",
   phoneDisplay: "+39 345 4131977",
   email: "sere.massarani@gmail.com",
@@ -12,20 +23,20 @@ export const CONTACT_INFO = {
   },
 };
 
-export const SCHEDULE = {
+export const SCHEDULE: Schedule = {
   days: "Lunedì - Venerdì",
   hours: "8:00 - 17:30",
   note: "Orari personalizzabili per venire incontro alle esigenze di mamma e papà",
   closures: "Chiuso nei giorni festivi e nel mese di agosto",
 };
 
-export const SOCIAL_LINKS = {
+export const SOCIAL_LINKS: SocialLinks = {
   whatsapp: "https://wa.me/393454131977",
   facebook: "https://www.facebook.com/nidocavallucciomarino/",
   instagram: "", // Add if available
 };
 
-export const SITE_INFO = {
+export const SITE_INFO: SiteInfo = {
   name: "Cavalluccio Marino di Serena",
   tagline: "Un luogo sicuro, flessibile e pieno d'amore, per crescere sereni e felici",
   description:
@@ -33,15 +44,15 @@ export const SITE_INFO = {
   year: new Date().getFullYear(),
 };
 
-export const NAV_ITEMS = [
+export const NAV_ITEMS: readonly NavItem[] = [
   { id: "home", label: "Home" },
   { id: "about", label: "Chi Siamo" },
   { id: "services", label: "Servizi" },
   { id: "schedule", label: "Orari" },
   { id: "contact", label: "Contatti" },
-];
+] as const;
 
-export const VALUES = [
+export const VALUES: readonly Value[] = [
   {
     title: "Solo 5 Bambini",
     description:
@@ -62,9 +73,9 @@ export const VALUES = [
     description:
       "Un ambiente intimo e familiare, lontano dallo stress dei grandi asili.",
   },
-];
+] as const;
 
-export const SERVICES = [
+export const SERVICES: readonly Service[] = [
   {
     title: "Cura e Attenzione",
     description:
@@ -98,9 +109,9 @@ export const SERVICES = [
     ],
     image: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&h=600&q=80&fit=crop",
   },
-];
+] as const;
 
-export const TESTIMONIALS = [
+export const TESTIMONIALS: readonly Testimonial[] = [
   {
     quote: "Mio figlio ha trovato al Cavalluccio Marino un secondo casa. Tata Serena è attenta, paziente e sempre disponibile. Lo consiglio a tutti i genitori!",
     name: "Mamma di Luca",
@@ -119,4 +130,4 @@ export const TESTIMONIALS = [
     role: "3 anni",
     image: "https://i.pravatar.cc/150?img=9"
   }
-];
+] as const;

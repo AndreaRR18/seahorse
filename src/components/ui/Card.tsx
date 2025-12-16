@@ -1,7 +1,8 @@
 import React from 'react';
+import type { CardProps } from '../../types';
 import styles from '../../styles/components/Card.module.css';
 
-const Card = ({ image, title, description, highlights, className = '' }) => {
+const Card: React.FC<CardProps> = ({ image, title, description, highlights, className = '' }) => {
   return (
     <div className={`${styles.card} ${className}`}>
       {image && (
@@ -15,7 +16,7 @@ const Card = ({ image, title, description, highlights, className = '' }) => {
         {highlights && highlights.length > 0 && (
           <ul className={styles.highlights}>
             {highlights.map((highlight, index) => (
-              <li key={index} className={styles.highlight}>{highlight}</li>
+              <li key={`highlight-${index}`} className={styles.highlight}>{highlight}</li>
             ))}
           </ul>
         )}
