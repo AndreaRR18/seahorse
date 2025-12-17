@@ -5,6 +5,7 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Training from './components/sections/Training';
 import Services from './components/sections/Services';
+import Gallery from './components/sections/Gallery';
 import Testimonials from './components/sections/Testimonials';
 import Schedule from './components/sections/Schedule';
 import Contact from './components/sections/Contact';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <About />
         <Training />
         <Services />
+        <Gallery />
         <Testimonials />
         <Schedule />
         <Contact />

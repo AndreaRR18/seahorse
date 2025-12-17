@@ -121,3 +121,9 @@ export interface TrainingArea {
   area: string;
   courses: Course[];
 }
+
+// Gallery Types
+export interface GalleryImage {
+  src: string;
+  alt: string;
+}
