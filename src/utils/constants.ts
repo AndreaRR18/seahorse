@@ -103,7 +103,7 @@ export const SERVICES: readonly Service[] = [
       "Lettura e musica ogni giorno",
       "Attività all'aperto e gioco libero",
     ],
-    image: "/seahorse/assets/baby_montessory.jpeg",
+    image: "/seahorse/assets/baby_outdoor.jpeg",
   },
   {
     title: "Orari Flessibili per Famiglie Moderne",
