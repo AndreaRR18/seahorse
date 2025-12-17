@@ -15,7 +15,7 @@ const Services: React.FC = () => {
       <div className={styles.servicesContent}>
         <h2 className={styles.title}>I Nostri Servizi</h2>
         <p className={styles.subtitle}>
-          Offriamo un'ampia gamma di servizi per soddisfare le esigenze della vostra famiglia
+          Offriamo un'ampia gamma di servizi per soddisfare le esigenze di ogni famiglia
         </p>
 
         <div className={styles.servicesGrid}>

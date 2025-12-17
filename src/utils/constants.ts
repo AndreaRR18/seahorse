@@ -88,6 +88,8 @@ export const SERVICES: readonly Service[] = [
       "Diario dei ricordi settimanale per i genitori",
       "Comunicazione continua su progressi e momenti speciali",
       "Ambiente sicuro e accogliente",
+      "Meno possibilità di contagio",
+      "Più attenzione per ogni bambino e bambina"
     ],
     image: "/seahorse/assets/tata_baby_hand_color.jpeg",
   },
