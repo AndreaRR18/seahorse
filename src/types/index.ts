@@ -61,10 +61,8 @@ export interface Service {
 
 // Testimonials Types
 export interface Testimonial {
-  quote: string;
   name: string;
-  role: string;
-  image: string;
+  quote: string;
 }
 
 // Form Types

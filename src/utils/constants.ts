@@ -119,25 +119,44 @@ export const SERVICES: readonly Service[] = [
 
 export const TESTIMONIALS: readonly Testimonial[] = [
   {
-    quote:
-      "Mio figlio ha trovato al Cavalluccio Marino un secondo casa. Tata Serena è attenta, paziente e sempre disponibile. Lo consiglio a tutti i genitori!",
-    name: "Mamma di Luca",
-    role: "2 anni",
-    image: "https://i.pravatar.cc/150?img=1",
+    name: "Marco",
+    quote: "Abbiamo portato la nostra piccola per pochi mesi e ci siamo trovati bene; tata Serena è stata molto dolce e nostra figlia le si è affezionata molto! Sempre pronta, poi, ad aggiornarci quotidianamente (mandandoci anche foto/ video 'in diretta') e a dare consigli a genitori come noi alle prime armi!!",
   },
   {
-    quote:
-      "Finalmente un nido dove non sei un numero! Tata Serena conosce ogni bambino e segue i suoi progressi con amore. È come avere una nonna premurosa.",
-    name: "Papà di Emma",
-    role: "18 mesi",
-    image: "https://i.pravatar.cc/150?img=5",
+    name: "Rozy",
+    quote: "Consiglio questo posto per chi vuole lasciare il proprio figlio al sicuro, in un ambiente sereno. Mio figlio si è sentito a casa, in famiglia. Serena molto dolce, disponibile e attenta (mi mandava tutti giorni più volte foto e video di mio figlio). Grazie ancora!",
   },
   {
-    quote:
-      "La flessibilità degli orari ci ha salvato! Tata Serena capisce le esigenze delle famiglie moderne. Mia figlia è felice e serena ogni giorno.",
-    name: "Mamma di Giulia",
-    role: "3 anni",
-    image: "https://i.pravatar.cc/150?img=9",
+    name: "Alessandra",
+    quote: "Lo consiglio perché al Nido di Tata Serena ognuno si sente come a casa. La tata è molto attenta, dolce, accogliente e allo stesso tempo ferma e decisa. È autorevole e materna al punto giusto. C'è sempre spazio per un confronto. A nostro figlio è piaciuto molto trascorrere qui le sue giornate e io sono sempre stata serena nell'affidarlo alla Tata. Decisamente 5 stelle💫",
+  },
+  {
+    name: "Stefania",
+    quote: "Assolutamente 'straconsigliato'. Noi non abbiamo avuto l'opportunità di finire l'anno per causa Covid-19, però ciò non toglie che questi pochi mesi passati con tata Serena hanno aiutato tantissimo sia Brian nella sua crescita che me mamma. Ambiente pulito e confortevole. Cibo 🔝🔝🔝🔝 perché Brian a casa non mangia niente e invece al nido sì. Accoglienza perfetta (compreso di caffè la mattina 😜). Disponibilità massima nei confronti dei genitori. Mi dispiace non poterci tornare😞, ma sicuramente con l'arrivo di un'altro/a figlio/a la tata tornerà a far parte dei nostri giorni ❤️",
+  },
+  {
+    name: "Melissa",
+    quote: "Dolcissima tata, con tanta creatività e amorevolezza! Sempre molto comprensiva e attenta a tutti.... Mio figlio qui dentro si è trovato molto bene. Ciao tata sere❤️❤️",
+  },
+  {
+    name: "Mihaela",
+    quote: "5 stelle. Nido famiglia molto accogliente, Tata sempre disponibile è molto attenta alle esigenze di ciascun bimbo e delle famiglie. Un grazie enorme a Tata Serena.😘❤",
+  },
+  {
+    name: "Laurentiu",
+    quote: "Nido famiglia belisimo tranquilo, tata sempre disponibile e molto atento ai picoli. Raccomando a tutti genitori.",
+  },
+  {
+    name: "Mara",
+    quote: "Nido famiglia favoloso!!! Una tata esemplare sempre disponibile e attenta ai bisogni dei piccoli!!! Supersoddisfatta dell'esperienza della mia bambina che a settembre andrà alla materna.... Consigliatissimo.",
+  },
+  {
+    name: "Eudochia",
+    quote: "Nido famiglia, un ambiente molto tranquillo e sereno, consigliato a tutte le famiglie.",
+  },
+  {
+    name: "Lilibet",
+    quote: "Nido famiglia particolarmente accogliente, spazi idonei e pensati per i più piccoli. Educatrice molto dolce e amorevole a disposizione dei genitori e delle loro esigenze. Lo consiglio a tutti!!",
   },
 ] as const;
 
