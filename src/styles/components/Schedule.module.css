@@ -7,7 +7,18 @@
 .title {
   font-size: clamp(2rem, 4vw, 2.5rem);
   color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-dark);
   margin-bottom: var(--spacing-xl);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
 }
 
 .scheduleCard {
@@ -46,15 +57,17 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-spacing-widest);
   margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-medium);
 }
 
 .value {
   font-size: var(--font-size-2xl);
   color: var(--color-primary);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin: 0;
+  line-height: var(--line-height-tight);
 }
 
 .note {
@@ -62,10 +75,14 @@
   color: var(--color-text-dark);
   font-style: italic;
   margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
 }
 
 .closures {
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
   margin: 0;
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
 }

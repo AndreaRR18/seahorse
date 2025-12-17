@@ -1,0 +1,19 @@
+{
+  "name": "Cavalluccio Marino di Serena",
+  "short_name": "Cavalluccio Marino",
+  "description": "Asilo nido famiglia a Lodi con cura personalizzata per massimo 5 bambini",
+  "start_url": "/seahorse/",
+  "display": "standalone",
+  "background_color": "#ADD8E6",
+  "theme_color": "#ADD8E6",
+  "icons": [
+    {
+      "src": "/assets/logo-placeholder.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

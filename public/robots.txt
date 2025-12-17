@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: 
+Allow: /
+
+Sitemap: https://andreaperinu.github.io/seahorse/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 2
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+
+# Bingbot specific
+User-agent: Bingbot
+Allow: /

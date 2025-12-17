@@ -6,13 +6,25 @@
   font-size: clamp(2rem, 4vw, 2.5rem);
   color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
 }
 
 .address {
   font-size: var(--font-size-lg);
   color: var(--color-text-light);
   margin-bottom: var(--spacing-xl);
-  line-height: 1.8;
+  line-height: var(--line-height-loose);
+  font-weight: var(--font-weight-normal);
 }
 
 .mapContainer {
