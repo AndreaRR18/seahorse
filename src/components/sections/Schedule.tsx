@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionContainer from '../ui/SectionContainer';
-import { FaClock } from 'react-icons/fa';
+import { FaClock, FaCheckCircle, FaHandHoldingHeart } from 'react-icons/fa';
 import { SCHEDULE } from '../../utils/constants';
 import styles from '../../styles/components/Schedule.module.css';
 
@@ -35,6 +35,35 @@ const Schedule: React.FC = () => {
           </div>
           <p className={styles.note}>{SCHEDULE.note}</p>
           <p className={styles.closures}>{SCHEDULE.closures}</p>
+        </div>
+
+        <div className={styles.pricingSection}>
+          <div className={styles.pricingCard}>
+            <div className={styles.iconWrapper}>
+              <FaCheckCircle />
+            </div>
+            <h3 className={styles.pricingTitle}>Nessun Costo Nascosto</h3>
+            <p className={styles.pricingDescription}>
+              Le nostre rette sono <strong>tutto compreso</strong>:
+            </p>
+            <ul className={styles.pricingList}>
+              <li>Pasti (colazione, pranzo, merenda e spuntino pomeridiano)</li>
+              <li>Materiali didattici (giochi, libri, materiali per attività creative)</li>
+              <li>Cambio (pannolini e creme)</li>
+            </ul>
+          </div>
+
+          <div className={styles.pricingCard}>
+            <div className={styles.iconWrapper}>
+              <FaHandHoldingHeart />
+            </div>
+            <h3 className={styles.pricingTitle}>Sostegno alle Famiglie con il Bonus Nido</h3>
+            <p className={styles.pricingDescription}>
+              Sappiamo che ogni famiglia ha esigenze diverse, e per questo vogliamo informarti che{' '}
+              <strong>esiste la possibilità di richiedere il Bonus Nido</strong>, un contributo statale pensato
+              per aiutare le famiglie a sostenere i costi dell'asilo.
+            </p>
+          </div>
         </div>
       </div>
     </SectionContainer>

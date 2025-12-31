@@ -73,7 +73,7 @@ export const VALUES: readonly Value[] = [
       "Tata Serena porta la sua lunga esperienza nell'accudimento dei bambini.",
   },
   {
-    title: "Un Secondo Casa",
+    title: "Una Seconda Casa",
     description:
       "Un ambiente intimo e familiare, lontano dallo stress dei grandi asili.",
   },
@@ -105,6 +105,18 @@ export const SERVICES: readonly Service[] = [
       "Attività all'aperto e gioco libero",
     ],
     image: "/seahorse/assets/baby_outdoor.jpeg",
+  },
+  {
+    title: "Alimentazione Sana e Casalinga",
+    description:
+      "Al Cavalluccio Marino, crediamo che una corretta alimentazione sia fondamentale per la crescita dei bambini. Per questo prepariamo pasti freschi e bilanciati ogni giorno, utilizzando ingredienti di stagione e ricette casalinghe, senza conservanti o cibi preconfezionati.",
+    highlights: [
+      "Menù personalizzato adattato alle esigenze e allergie di ogni bambino",
+      "Educazione alimentare attraverso attività ludiche",
+      "Preparazione di semplici ricette e degustazione di frutta e verdura",
+      "Menù settimanale condiviso con le famiglie per massima trasparenza",
+    ],
+    image: "/seahorse/assets/baby_activity.jpeg",
   },
   {
     title: "Orari Flessibili per Famiglie Moderne",

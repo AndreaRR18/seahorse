@@ -1,12 +1,15 @@
 # Cavalluccio Marino - Asilo Nido Famiglia Website
 
-![Cavalluccio Marino](https://andreaperinu.github.io/seahorse/assets/logo-placeholder.svg)
+![Cavalluccio Marino](https://www.nido-cavallucciomarino.it/assets/logo-placeholder.svg)
 
 **Family Daycare Website** for Cavalluccio Marino di Serena in Lodi, Italy
 
 ## 🌐 Live Website
 
-👉 [https://andreaperinu.github.io/seahorse/](https://andreaperinu.github.io/seahorse/)
+👉 [https://www.nido-cavallucciomarino.it](https://www.nido-cavallucciomarino.it)
+
+**GitHub Pages URL (redirects to custom domain):**
+👉 [https://andrearr18.github.io/seahorse/](https://andrearr18.github.io/seahorse/)
 
 ## 📋 About
 
@@ -24,7 +27,7 @@ Cavalluccio Marino is a family daycare (asilo nido famiglia) located in San Bern
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/andreaperinu/seahorse.git
+   git clone https://github.com/andrearr18/seahorse.git
    cd seahorse
    ```
 
@@ -58,8 +61,17 @@ Cavalluccio Marino is a family daycare (asilo nido famiglia) located in San Bern
 ```
 src/
 ├── components/
-│   ├── layout/       # Layout components (Header, Footer)
-│   ├── sections/     # Page sections (Hero, About, Services, etc.)
+│   ├── layout/       # Layout components (Header, Footer, Navigation)
+│   ├── sections/     # Page sections (Hero, About, Services, Schedule, Gallery, etc.)
+│   │   ├── About.tsx          # About the daycare section
+│   │   ├── Contact.tsx        # Contact form and information
+│   │   ├── Gallery.tsx        # Auto-scrolling image gallery
+│   │   ├── Hero.tsx           # Hero section with main heading
+│   │   ├── Location.tsx       # Location and map information
+│   │   ├── Schedule.tsx       # Schedule and pricing information
+│   │   ├── Services.tsx       # Services offered
+│   │   ├── Testimonials.tsx   # Customer testimonials
+│   │   └── Training.tsx       # Staff training information
 │   ├── ui/           # Reusable UI components (Button, Card, Form)
 │   └── seo/          # SEO components (StructuredData)
 ├── styles/
@@ -79,6 +91,8 @@ public/
 ├── robots.txt       # Search engine crawling rules
 ├── sitemap.xml      # XML sitemap for search engines
 └── manifest.json    # PWA manifest
+
+CNAME                # Custom domain configuration (www.nido-cavallucciomarino.it)
 ```
 
 ## 🎨 Features
@@ -154,6 +168,52 @@ public/
 - **Performance**: 22/25
 - **Overall**: 92/100
 
+## 🌍 Custom Domain Setup
+
+The website is configured to use a custom domain: **www.nido-cavallucciomarino.it**
+
+### Domain Configuration
+
+1. **CNAME File**: Contains `www.nido-cavallucciomarino.it` for GitHub Pages
+2. **DNS Settings**: Configured to point to GitHub Pages servers
+3. **HTTPS**: Enabled with automatic SSL certificate from GitHub
+
+### DNS Configuration Requirements
+
+To set up the custom domain:
+
+```bash
+# CNAME Record (for www subdomain)
+www.nido-cavallucciomarino.it CNAME andrearr18.github.io
+
+# OR A Records (for root domain)
+nido-cavallucciomarino.it A 185.199.108.153
+nido-cavallucciomarino.it A 185.199.109.153
+nido-cavallucciomarino.it A 185.199.110.153
+nido-cavallucciomarino.it A 185.199.111.153
+```
+
+### GitHub Pages Settings
+
+- **Custom domain**: `www.nido-cavallucciomarino.it`
+- **HTTPS**: Enabled (automatic certificate provisioning)
+- **Source**: GitHub Actions or `gh-pages` branch
+- **Build**: Vite + TypeScript production build
+
+### Website Structure
+
+The website features these main sections:
+
+1. **Hero**: Main heading and call-to-action
+2. **About**: Information about the daycare philosophy
+3. **Services**: Detailed service offerings
+4. **Schedule**: Daily schedule and pricing information
+5. **Gallery**: Auto-scrolling image carousel
+6. **Testimonials**: Customer reviews and feedback
+7. **Training**: Staff qualifications and training
+8. **Location**: Map and contact information
+9. **Contact**: Contact form for inquiries
+
 ## 🔧 Technology Stack
 
 - **Framework**: React 18
@@ -209,6 +269,8 @@ See [CHANGELOG.md](CHANGELOG.md) for the list of changes.
 ---
 
 **Last Updated**: December 2024
-**Version**: 1.0.0
+**Version**: 1.1.0
 **SEO Health Score**: 92/100
 **Code Quality Score**: 92/100
+**Custom Domain**: www.nido-cavallucciomarino.it
+**GitHub Pages URL**: https://andrearr18.github.io/seahorse/
