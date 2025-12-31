@@ -12,8 +12,8 @@ const StructuredData: React.FC = () => {
     "@type": "Organization",
     "name": SITE_INFO.name,
     "description": SITE_INFO.description,
-    "url": "https://andreaperinu.github.io/seahorse/",
-    "logo": "https://andreaperinu.github.io/seahorse/assets/logo-placeholder.svg",
+    "url": "https://andrearr18.github.io/seahorse/",
+    "logo": "https://andrearr18.github.io/seahorse/assets/logo-placeholder.svg",
     "foundingDate": "2009",
     "founder": {
       "@type": "Person",
@@ -30,8 +30,8 @@ const StructuredData: React.FC = () => {
     "@type": "ChildCare",
     "name": SITE_INFO.name,
     "description": SITE_INFO.description,
-    "image": "https://andreaperinu.github.io/seahorse/assets/og-image.jpg",
-    "url": "https://andreaperinu.github.io/seahorse/",
+    "image": "https://andrearr18.github.io/seahorse/assets/og-image.jpg",
+    "url": "https://andrearr18.github.io/seahorse/",
     "telephone": CONTACT_INFO.phone,
     "email": CONTACT_INFO.email,
     "address": {
@@ -128,7 +128,7 @@ const StructuredData: React.FC = () => {
       "name": SITE_INFO.name,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://andreaperinu.github.io/seahorse/assets/logo-placeholder.svg",
+        "url": "https://andrearr18.github.io/seahorse/assets/logo-placeholder.svg",
         "width": 512,
         "height": 512
       }
@@ -136,7 +136,7 @@ const StructuredData: React.FC = () => {
     "inLanguage": "it",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://andreaperinu.github.io/seahorse/"
+      "@id": "https://andrearr18.github.io/seahorse/"
     }
   };
 
@@ -148,7 +148,7 @@ const StructuredData: React.FC = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://andreaperinu.github.io/seahorse/"
+        "item": "https://andrearr18.github.io/seahorse/"
       }
     ]
   };

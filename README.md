@@ -9,7 +9,7 @@
 👉 [https://www.nido-cavallucciomarino.it](https://www.nido-cavallucciomarino.it)
 
 **GitHub Pages URL (redirects to custom domain):**
-👉 [https://andreaperinu.github.io/seahorse/](https://andreaperinu.github.io/seahorse/)
+👉 [https://andrearr18.github.io/seahorse/](https://andrearr18.github.io/seahorse/)
 
 ## 📋 About
 
@@ -27,7 +27,7 @@ Cavalluccio Marino is a family daycare (asilo nido famiglia) located in San Bern
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/andreaperinu/seahorse.git
+   git clone https://github.com/andrearr18/seahorse.git
    cd seahorse
    ```
 
@@ -184,7 +184,7 @@ To set up the custom domain:
 
 ```bash
 # CNAME Record (for www subdomain)
-www.nido-cavallucciomarino.it CNAME andreaperinu.github.io
+www.nido-cavallucciomarino.it CNAME andrearr18.github.io
 
 # OR A Records (for root domain)
 nido-cavallucciomarino.it A 185.199.108.153
@@ -273,4 +273,4 @@ See [CHANGELOG.md](CHANGELOG.md) for the list of changes.
 **SEO Health Score**: 92/100
 **Code Quality Score**: 92/100
 **Custom Domain**: www.nido-cavallucciomarino.it
-**GitHub Pages URL**: https://andreaperinu.github.io/seahorse/
+**GitHub Pages URL**: https://andrearr18.github.io/seahorse/

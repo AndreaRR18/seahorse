@@ -1,8 +1,8 @@
 User-agent: *
-Disallow: 
+Disallow:
 Allow: /
 
-Sitemap: https://andreaperinu.github.io/seahorse/sitemap.xml
+Sitemap: https://andrearr18.github.io/seahorse/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 2
