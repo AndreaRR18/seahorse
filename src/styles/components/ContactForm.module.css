@@ -67,6 +67,7 @@
   line-height: var(--line-height-normal);
   transition: all var(--transition-fast);
   background: var(--color-white);
+  color: var(--color-text-dark);
 }
 
 .input:focus,
