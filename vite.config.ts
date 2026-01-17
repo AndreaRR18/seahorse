@@ -5,7 +5,7 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/seahorse/',  // CRITICAL for GitHub Pages
+  base: '/',  // Updated for custom domain deployment
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
