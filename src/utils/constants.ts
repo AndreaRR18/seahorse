@@ -92,7 +92,7 @@ export const SERVICES: readonly Service[] = [
       "Meno possibilità di contagio",
       "Più attenzione per ogni bambino e bambina"
     ],
-    image: "/seahorse/assets/tata_baby_hand_color.jpeg",
+    image: "/assets/tata_baby_hand_color.jpeg",
   },
   {
     title: "Attività Educative e Creative",
@@ -104,7 +104,7 @@ export const SERVICES: readonly Service[] = [
       "Lettura e musica ogni giorno",
       "Attività all'aperto e gioco libero",
     ],
-    image: "/seahorse/assets/baby_outdoor.jpeg",
+    image: "/assets/baby_outdoor.jpeg",
   },
   {
     title: "Alimentazione Sana e Casalinga",
@@ -116,7 +116,7 @@ export const SERVICES: readonly Service[] = [
       "Preparazione di semplici ricette e degustazione di frutta e verdura",
       "Menù settimanale condiviso con le famiglie per massima trasparenza",
     ],
-    image: "/seahorse/assets/baby_activity.jpeg",
+    image: "/assets/baby_activity.jpeg",
   },
   {
     title: "Orari Flessibili per Famiglie Moderne",
@@ -128,7 +128,7 @@ export const SERVICES: readonly Service[] = [
       "Servizio estivo disponibile",
       "Inserimento graduale per i bambini",
     ],
-    image: "/seahorse/assets/family_daycare.jpg",
+    image: "/assets/family_daycare.jpg",
   },
 ] as const;
 
@@ -255,35 +255,35 @@ export const TRAINING_AREAS: readonly TrainingArea[] = [
 
 export const GALLERY_IMAGES: readonly GalleryImage[] = [
   {
-    src: "/seahorse/assets/babies_books.jpeg",
+    src: "/assets/babies_books.jpeg",
     alt: "Bambini che leggono libri durante l'attività educativa",
   },
   {
-    src: "/seahorse/assets/babies_feet.jpeg",
+    src: "/assets/babies_feet.jpeg",
     alt: "Piedini dei bambini durante il gioco",
   },
   {
-    src: "/seahorse/assets/babies_xylo.jpeg",
+    src: "/assets/babies_xylo.jpeg",
     alt: "Bambini che giocano con lo xilofono durante attività musicale",
   },
   {
-    src: "/seahorse/assets/baby_activity.jpeg",
+    src: "/assets/baby_activity.jpeg",
     alt: "Bambino impegnato in attività educativa",
   },
   {
-    src: "/seahorse/assets/baby_montessory.jpeg",
+    src: "/assets/baby_montessory.jpeg",
     alt: "Attività Montessori con materiali didattici",
   },
   {
-    src: "/seahorse/assets/baby_outdoor.jpeg",
+    src: "/assets/baby_outdoor.jpeg",
     alt: "Bambini durante attività all'aperto",
   },
   {
-    src: "/seahorse/assets/baby_paint.jpeg",
+    src: "/assets/baby_paint.jpeg",
     alt: "Bambino che dipinge durante attività artistica",
   },
   {
-    src: "/seahorse/assets/tata_baby_hand_color.jpeg",
+    src: "/assets/tata_baby_hand_color.jpeg",
     alt: "Mani colorate durante attività creative",
   },
 ] as const;
