@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deployment Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Testing Website Deployment</h1>
+    
+    <h2>Test Results:</h2>
+    <div id="test-results"></div>
+    
+    <h2>File Structure Check:</h2>
+    <div id="file-check"></div>
+    
+    <script>
+        // Test 1: Check if main JavaScript file exists
+        const scriptTest = document.createElement('script');
+        scriptTest.src = '/assets/index-Cv2kyAUd.js';
+        scriptTest.onload = function() {
+            document.getElementById('test-results').innerHTML += '<p style="color: green;">✓ Main JavaScript file loaded successfully</p>';
+        };
+        scriptTest.onerror = function() {
+            document.getElementById('test-results').innerHTML += '<p style="color: red;">✗ Main JavaScript file failed to load</p>';
+        };
+        document.head.appendChild(scriptTest);
+
+        // Test 2: Check if CSS file exists
+        const linkTest = document.createElement('link');
+        linkTest.rel = 'stylesheet';
+        linkTest.href = '/assets/index-Bv5Cz681.css';
+        linkTest.onload = function() {
+            document.getElementById('test-results').innerHTML += '<p style="color: green;">✓ Main CSS file loaded successfully</p>';
+        };
+        linkTest.onerror = function() {
+            document.getElementById('test-results').innerHTML += '<p style="color: red;">✗ Main CSS file failed to load</p>';
+        };
+        document.head.appendChild(linkTest);
+
+        // Test 3: Check if assets directory is accessible
+        const imgTest = new Image();
+        imgTest.src = '/assets/logo-placeholder.svg';
+        imgTest.onload = function() {
+            document.getElementById('test-results').innerHTML += '<p style="color: green;">✓ Assets directory accessible</p>';
+        };
+        imgTest.onerror = function() {
+            document.getElementById('test-results').innerHTML += '<p style="color: red;">✗ Assets directory not accessible</p>';
+        };
+
+        // Test 4: Check file structure
+        const filesToCheck = [
+            '/index.html',
+            '/assets/index-Bv5Cz681.css',
+            '/assets/index-Cv2kyAUd.js',
+            '/assets/logo-placeholder.svg',
+            '/manifest.json',
+            '/robots.txt',
+            '/sitemap.xml'
+        ];
+
+        filesToCheck.forEach(file => {
+            fetch(file, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('file-check').innerHTML += `<p style="color: green;">✓ ${file} exists</p>`;
+                    } else {
+                        document.getElementById('file-check').innerHTML += `<p style="color: red;">✗ ${file} not found (${response.status})</p>`;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('file-check').innerHTML += `<p style="color: red;">✗ ${file} error: ${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
