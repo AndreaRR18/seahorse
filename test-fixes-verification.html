@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Popup Fixes Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .testimonial-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .read-more-button {
+            background: none;
+            border: none;
+            color: #007bff; /* Primary color - darker and more visible */
+            font-size: 14px;
+            font-weight: 600; /* Semibold for better visibility */
+            cursor: pointer;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .read-more-button:hover {
+            color: #6c757d; /* Secondary color for hover */
+            text-decoration-thickness: 2px;
+        }
+        .read-more-button:focus {
+            outline: 2px solid #007bff;
+            outline-offset: 2px;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .close-button {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .info {
+            color: blue;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testimonial Popup Fixes Verification</h1>
+    
+    <div class="testimonial-card">
+        <h3>Valentina</h3>
+        <p>La nostra esperienza all'asilo nido Cavalluccio Marino di Tata Serena Massarani è stata semplicemente meravigliosa...</p>
+        <button 
+            class="read-more-button"
+            onclick="event.preventDefault(); openPopup()"
+            type="button"
+            aria-label="Leggi tutta la recensione di Valentina"
+        >
+            Leggi di più
+        </button>
+    </div>
+    
+    <!-- Add more space to test scroll position -->
+    <div style="height: 1500px; background: linear-gradient(to bottom, #f5f5f5, #e9e9e9); padding: 20px;">
+        <p style="text-align: center; color: #666;">Scroll down to test position maintenance...</p>
+    </div>
+    
+    <div id="popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>Valentina</h2>
+            <p>La nostra esperienza all'asilo nido Cavalluccio Marino di Tata Serena Massarani è stata semplicemente meravigliosa e assolutamente positiva sotto ogni aspetto. Fin dal primo momento abbiamo trovato un ambiente accogliente, sereno e pieno di attenzione verso i bambini e le loro esigenze. Tata Serena è davvero unica: una persona speciale, dolce, paziente e profondamente competente.</p>
+        </div>
+    </div>
+    
+    <script>
+        function openPopup() {
+            console.log('Opening popup - scroll position should be maintained');
+            document.getElementById('popup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close popup when clicking outside
+        document.getElementById('popup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+        
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+    </script>
+    
+    <h2>Fixes Applied</h2>
+    <ul>
+        <li class="success">✅ Added <code>e.preventDefault()</code> to button click handler</li>
+        <li class="success">✅ Added <code>type="button"</code> to prevent form submission</li>
+        <li class="success">✅ Changed button color from secondary to primary (darker, more visible)</li>
+        <li class="success">✅ Increased button font weight to semibold for better readability</li>
+        <li class="success">✅ Maintained all existing functionality</li>
+    </ul>
+    
+    <h3>Expected Behavior:</h3>
+    <ul class="info">
+        <li>📍 Page should <strong>NOT</strong> scroll to top when clicking "Leggi di più"</li>
+        <li>🎨 Button should be clearly visible with primary color</li>
+        <li>🖱️ Popup should open smoothly without position changes</li>
+        <li>📱 Mobile and desktop behavior should be consistent</li>
+        <li>⌨️ All accessibility features should remain functional</li>
+    </ul>
+    
+    <h3>Technical Changes:</h3>
+    <pre><code>// Before (causing scroll issues):
+&lt;button onClick={() => openTestimonialPopup(testimonial)}&gt;
+
+// After (fixed):
+&lt;button 
+  onClick={(e) => {
+    e.preventDefault(); 
+    openTestimonialPopup(testimonial);
+  }}
+  type="button"
+&gt;</code></pre>
+    
+    <pre><code>// CSS Before (less visible):
+.readMoreButton {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+// CSS After (more visible):
+.readMoreButton {
+  color: var(--color-primary); 
+  font-weight: var(--font-weight-semibold);
+}</code></pre>
+</body>
+</html>

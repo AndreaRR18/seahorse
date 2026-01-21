@@ -127,7 +127,11 @@ const Testimonials: React.FC = () => {
                     <p className={styles.authorName}>{testimonial.name}</p>
                     <button
                       className={styles.readMoreButton}
-                      onClick={() => openTestimonialPopup(testimonial)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        openTestimonialPopup(testimonial);
+                      }}
+                      type="button"
                       aria-label={`Leggi tutta la recensione di ${testimonial.name}`}
                     >
                       Leggi di più

@@ -135,9 +135,9 @@
 .readMoreButton {
   background: none;
   border: none;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
   padding: var(--spacing-xs) 0;
   transition: all var(--transition-normal);
@@ -146,7 +146,7 @@
 }
 
 .readMoreButton:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration-thickness: 2px;
 }
 
