@@ -91,8 +91,18 @@ const Testimonials: React.FC = () => {
 
   // Handle opening testimonial popup
   const openTestimonialPopup = (testimonial: Testimonial) => {
+    // Store scroll position before opening popup
+    const currentScrollY = window.scrollY;
+    console.log('Storing scroll position:', currentScrollY);
+    
     setSelectedTestimonial(testimonial);
     setIsPopupOpen(true);
+    
+    // Restore scroll position after state update
+    setTimeout(() => {
+      console.log('Restoring scroll position:', currentScrollY);
+      window.scrollTo(0, currentScrollY);
+    }, 50);
   };
 
   // Handle closing testimonial popup
@@ -125,17 +135,42 @@ const Testimonials: React.FC = () => {
                   <p className={styles.quote}>{testimonial.quote}</p>
                   <div className={styles.author}>
                     <p className={styles.authorName}>{testimonial.name}</p>
-                    <button
-                      className={styles.readMoreButton}
+                    <div 
                       onClick={(e) => {
                         e.preventDefault();
-                        openTestimonialPopup(testimonial);
+                        e.stopPropagation();
                       }}
-                      type="button"
-                      aria-label={`Leggi tutta la recensione di ${testimonial.name}`}
+                      style={{ display: 'inline-block' }}
                     >
-                      Leggi di più
-                    </button>
+                      <button
+                        className={styles.readMoreButton}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          e.nativeEvent.stopImmediatePropagation();
+                          
+                          // Debug scroll position
+                          const scrollYBefore = window.scrollY;
+                          console.log(`Opening popup for ${testimonial.name} - Scroll before:`, scrollYBefore);
+                          
+                          openTestimonialPopup(testimonial);
+                          
+                          // Check scroll position after state update
+                          setTimeout(() => {
+                            const scrollYAfter = window.scrollY;
+                            console.log(`Scroll after opening:`, scrollYAfter);
+                            if (scrollYBefore !== scrollYAfter) {
+                              console.warn(`Scroll position changed from ${scrollYBefore} to ${scrollYAfter}`);
+                              window.scrollTo(0, scrollYBefore);
+                            }
+                          }, 100);
+                        }}
+                        type="button"
+                        aria-label={`Leggi tutta la recensione di ${testimonial.name}`}
+                      >
+                        Leggi di più
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}
