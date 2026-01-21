@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import SectionContainer from '../ui/SectionContainer';
+import TestimonialPopup from '../ui/TestimonialPopup';
 import { TESTIMONIALS } from '../../utils/constants';
+import { Testimonial } from '../../types';
 import styles from '../../styles/components/Testimonials.module.css';
 
 /**
@@ -11,6 +13,8 @@ import styles from '../../styles/components/Testimonials.module.css';
 const Testimonials: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const userInteractionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -85,37 +89,70 @@ const Testimonials: React.FC = () => {
     handleUserInteraction();
   };
 
+  // Handle opening testimonial popup
+  const openTestimonialPopup = (testimonial: Testimonial) => {
+    setSelectedTestimonial(testimonial);
+    setIsPopupOpen(true);
+  };
+
+  // Handle closing testimonial popup
+  const closeTestimonialPopup = () => {
+    setIsPopupOpen(false);
+    // Small delay to allow animation to complete before clearing testimonial
+    setTimeout(() => {
+      setSelectedTestimonial(null);
+    }, 300);
+  };
+
   return (
-    <SectionContainer id="testimonials" backgroundColor="var(--color-background)">
-      <div className={styles.testimonialsContent}>
-        <h2 className={styles.title}>La Nostra Esperienza</h2>
-        <p className={styles.subtitle}>
-          Cosa dicono le famiglie che si affidano a noi
-        </p>
+    <>
+      <SectionContainer id="testimonials" backgroundColor="var(--color-background)">
+        <div className={styles.testimonialsContent}>
+          <h2 className={styles.title}>La Nostra Esperienza</h2>
+          <p className={styles.subtitle}>
+            Cosa dicono le famiglie che si affidano a noi
+          </p>
 
-        <div className={styles.carouselWrapper}>
-          <div
-            className={styles.carouselContainer}
-            ref={scrollContainerRef}
-            onScroll={handleScroll}
-          >
-            {TESTIMONIALS.map((testimonial, index) => (
-              <div key={`testimonial-${index}`} className={styles.testimonialCard}>
-                <div className={styles.quoteIcon}>"</div>
-                <p className={styles.quote}>{testimonial.quote}</p>
-                <div className={styles.author}>
-                  <p className={styles.authorName}>{testimonial.name}</p>
+          <div className={styles.carouselWrapper}>
+            <div
+              className={styles.carouselContainer}
+              ref={scrollContainerRef}
+              onScroll={handleScroll}
+            >
+              {TESTIMONIALS.map((testimonial, index) => (
+                <div key={`testimonial-${index}`} className={styles.testimonialCard}>
+                  <div className={styles.quoteIcon}>"</div>
+                  <p className={styles.quote}>{testimonial.quote}</p>
+                  <div className={styles.author}>
+                    <p className={styles.authorName}>{testimonial.name}</p>
+                    <button
+                      className={styles.readMoreButton}
+                      onClick={() => openTestimonialPopup(testimonial)}
+                      aria-label={`Leggi tutta la recensione di ${testimonial.name}`}
+                    >
+                      Leggi di più
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <p className={styles.consent}>
-          * Tutte le testimonianze pubblicate con consenso esplicito dei genitori
-        </p>
-      </div>
-    </SectionContainer>
+          <p className={styles.consent}>
+            * Tutte le testimonianze pubblicate con consenso esplicito dei genitori
+          </p>
+        </div>
+      </SectionContainer>
+      
+      {/* Testimonial Popup */}
+      {selectedTestimonial && (
+        <TestimonialPopup
+          testimonial={selectedTestimonial}
+          onClose={closeTestimonialPopup}
+          isOpen={isPopupOpen}
+        />
+      )}
+    </>
   );
 };
 
