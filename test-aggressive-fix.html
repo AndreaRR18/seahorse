@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggressive Scroll Fix Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .read-more-button {
+            background: none;
+            border: none;
+            color: #007bff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .read-more-button:hover {
+            color: #6c757d;
+            text-decoration-thickness: 2px;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .aggressive {
+            color: red;
+            font-weight: bold;
+            background: yellow;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .debug-log {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .fixed-body {
+            position: fixed;
+            overflow: hidden;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aggressive Scroll Fix Test</h1>
+    
+    <div class="testimonial-card">
+        <h3>Valentina</h3>
+        <p>La nostra esperienza all'asilo nido Cavalluccio Marino di Tata Serena Massarani è stata semplicemente meravigliosa...</p>
+        <button 
+            class="read-more-button"
+            onclick="handleReadMore(event)"
+            type="button"
+            aria-label="Leggi tutta la recensione di Valentina"
+        >
+            Leggi di più
+        </button>
+    </div>
+    
+    <!-- Add significant space to test scroll position maintenance -->
+    <div style="height: 2500px; background: linear-gradient(to bottom, #f8f9fa, #e9ecef); padding: 20px;">
+        <p style="text-align: center; color: #666; margin-top: 50px;">⬇️ Scroll WAY down to test position maintenance ⬇️</p>
+        <div style="height: 1000px;"></div>
+        <h2 style="text-align: center; color: #666;">📍 TEST YOUR SCROLL POSITION HERE 📍</h2>
+        <p style="text-align: center; color: #999;">This is the critical test area - scroll position should be maintained exactly here</p>
+        <div style="height: 1000px;"></div>
+    </div>
+    
+    <div id="debugLog" class="debug-log">
+        <strong>Debug Log (Aggressive Fix):</strong><br>
+        <div id="logContent"></div>
+    </div>
+    
+    <script>
+        let scrollPositionBefore = 0;
+        let bodyWasFixed = false;
+        
+        function log(message, isAggressive = false) {
+            const logElement = document.getElementById('logContent');
+            const timestamp = new Date().toLocaleTimeString();
+            const className = isAggressive ? 'aggressive' : '';
+            logElement.innerHTML += `<div>[${timestamp}] <span class="${className}">${message}</span></div>`;
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+        
+        function handleReadMore(event) {
+            // AGGRESSIVE FIX: Comprehensive event prevention
+            event.preventDefault();
+            event.stopPropagation();
+            event.nativeEvent.stopImmediatePropagation();
+            
+            // AGGRESSIVE FIX: Store scroll position
+            scrollPositionBefore = window.scrollY;
+            log(`AGGRESSIVE FIX: Storing scroll position: ${scrollPositionBefore}px`, true);
+            
+            // AGGRESSIVE FIX: Lock scroll using multiple CSS methods
+            log('AGGRESSIVE FIX: Applying CSS scroll lock...', true);
+            document.documentElement.style.scrollBehavior = 'auto';
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPositionBefore}px`;
+            document.body.style.width = '100%';
+            bodyWasFixed = true;
+            
+            // Simulate React state update
+            setTimeout(() => {
+                const scrollPositionAfter = window.scrollY;
+                log(`Scroll position after state update: ${scrollPositionAfter}px`);
+                
+                // AGGRESSIVE FIX: Multiple restoration attempts
+                const restoreScroll = () => {
+                    const currentScroll = window.scrollY;
+                    if (currentScroll !== scrollPositionBefore) {
+                        log(`AGGRESSIVE FIX: Detected scroll change from ${scrollPositionBefore} to ${currentScroll}, restoring...`, true);
+                        
+                        // Try multiple scroll restoration methods
+                        window.scrollTo(0, scrollPositionBefore);
+                        if (document.scrollingElement) {
+                            document.scrollingElement.scrollTop = scrollPositionBefore;
+                        }
+                        document.documentElement.scrollTop = scrollPositionBefore;
+                        document.body.scrollTop = scrollPositionBefore;
+                        
+                        // Verify restoration
+                        setTimeout(() => {
+                            const restoredScroll = window.scrollY;
+                            if (restoredScroll === scrollPositionBefore) {
+                                log('AGGRESSIVE FIX: ✅ Scroll position successfully restored!', true);
+                            } else {
+                                log(`AGGRESSIVE FIX: ❌ Failed to restore (current: ${restoredScroll}, expected: ${scrollPositionBefore})`, true);
+                            }
+                        }, 20);
+                    } else {
+                        log('AGGRESSIVE FIX: ✅ Scroll position maintained successfully!', true);
+                    }
+                };
+                
+                // Try restoration multiple times
+                restoreScroll();
+                setTimeout(restoreScroll, 10);
+                setTimeout(restoreScroll, 50);
+                setTimeout(restoreScroll, 100);
+                
+                // Show popup
+                setTimeout(() => {
+                    alert('Popup would open here. Check debug logs for scroll position details.');
+                }, 150);
+            }, 50);
+        }
+        
+        // Log scroll position changes
+        window.addEventListener('scroll', () => {
+            if (!bodyWasFixed) {
+                log(`Current scroll position: ${window.scrollY}px`);
+            }
+        });
+        
+        log('Page loaded. Scroll down and click "Leggi di più" to test AGGRESSIVE scroll fix.');
+    </script>
+    
+    <h2>Aggressive Fix Implemented</h2>
+    <ul>
+        <li class="success">✅ <span class="aggressive">AGGRESSIVE</span> event prevention (preventDefault, stopPropagation, stopImmediatePropagation)</li>
+        <li class="success">✅ <span class="aggressive">AGGRESSIVE</span> CSS scroll locking (position: fixed, overflow: hidden)</li>
+        <li class="success">✅ <span class="aggressive">AGGRESSIVE</span> scroll position storage and restoration</li>
+        <li class="success">✅ Multiple scroll restoration methods (window.scrollTo, scrollingElement, etc.)</li>
+        <li class="success">✅ Multiple restoration attempts at different intervals</li>
+        <li class="success">✅ Comprehensive debug logging for verification</li>
+    </ul>
+    
+    <h3>Technical Implementation:</h3>
+    <pre><code>// AGGRESSIVE scroll position locking
+const openTestimonialPopup = (testimonial) => {
+  const currentScrollY = window.scrollY;
+  
+  // Lock scroll using CSS (most reliable method)
+  document.documentElement.style.scrollBehavior = 'auto';
+  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${currentScrollY}px`;
+  document.body.style.width = '100%';
+  
+  // Update state
+  setSelectedTestimonial(testimonial);
+  setIsPopupOpen(true);
+  
+  // Multiple scroll position verification and restoration
+  const restoreScroll = () => {
+    if (window.scrollY !== currentScrollY) {
+      window.scrollTo(0, currentScrollY);
+      document.scrollingElement?.scrollTop = currentScrollY;
+      document.documentElement.scrollTop = currentScrollY;
+      document.body.scrollTop = currentScrollY;
+    }
+  };
+  
+  restoreScroll();
+  setTimeout(restoreScroll, 10);
+  setTimeout(restoreScroll, 50);
+  setTimeout(restoreScroll, 100);
+};</code></pre>
+    
+    <h3>Expected Behavior:</h3>
+    <ul>
+        <li>📍 Page should <strong>DEFINITELY NOT</strong> scroll to top when clicking "Leggi di più"</li>
+        <li>🔒 Scroll position should be <strong>LOCKED</strong> using CSS position: fixed</li>
+        <li>🔄 Multiple restoration methods ensure scroll position is maintained</li>
+        <li>📊 Debug logs show <span class="aggressive">AGGRESSIVE</span> scroll position management</li>
+        <li>🎯 Popup should open smoothly without ANY position jumps</li>
+    </ul>
+    
+    <h3>Why This Should Work:</h3>
+    <ul>
+        <li>🔧 <strong>CSS Position Fixed</strong>: The most reliable way to prevent scroll jumps</li>
+        <li>🔄 <strong>Multiple Restoration Methods</strong>: Covers all browser edge cases</li>
+        <li>⏱️ <strong>Multiple Timing Attempts</strong>: Catches scroll changes at different phases</li>
+        <li>🚫 <strong>Comprehensive Event Prevention</strong>: Blocks all potential scroll triggers</li>
+        <li>📏 <strong>Exact Pixel Restoration</strong>: Precise scroll position maintenance</li>
+    </ul>
+    
+    <h3>Testing Instructions:</h3>
+    <ol>
+        <li>Scroll down this page to the <strong>📍 TEST YOUR SCROLL POSITION HERE 📍</strong> section</li>
+        <li>Click the "Leggi di più" button</li>
+        <li>Observe the debug logs - look for <span class="aggressive">AGGRESSIVE FIX</span> messages</li>
+        <li>Verify that your scroll position is <strong>EXACTLY</strong> maintained</li>
+        <li>Check that the popup opens without causing <strong>ANY</strong> page jumps</li>
+        <li>Notice that the hero image does <strong>NOT</strong> appear at the top</li>
+    </ol>
+</body>
+</html>
