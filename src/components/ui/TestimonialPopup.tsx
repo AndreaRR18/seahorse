@@ -8,10 +8,10 @@ interface TestimonialPopupProps {
   isOpen: boolean;
 }
 
-const TestimonialPopup: React.FC<TestimonialPopupProps> = ({ 
-  testimonial, 
-  onClose, 
-  isOpen 
+const TestimonialPopup: React.FC<TestimonialPopupProps> = ({
+  testimonial,
+  onClose,
+  isOpen
 }) => {
   const popupRef = useRef<HTMLDivElement>(null);
 
@@ -54,9 +54,9 @@ const TestimonialPopup: React.FC<TestimonialPopupProps> = ({
   return (
     <div className={styles.popupOverlay} role="dialog" aria-modal="true" aria-labelledby="testimonial-title">
       <div className={styles.popupContent} ref={popupRef}>
-        <button 
-          className={styles.closeButton} 
-          onClick={onClose} 
+        <button
+          className={styles.closeButton}
+          onClick={onClose}
           aria-label="Chiudi testimonianze"
         >
           ×
