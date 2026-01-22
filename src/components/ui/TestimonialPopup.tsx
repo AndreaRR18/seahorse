@@ -24,27 +24,26 @@ const TestimonialPopup: React.FC<TestimonialPopupProps> = ({
     };
 
     if (isOpen) {
-      console.log('TestimonialPopup: Popup is now open');
+      // Store scroll position before adding no-scroll class
+      const scrollY = window.scrollY;
+      console.log('Popup opened, storing scroll position:', scrollY);
+      
       document.addEventListener('mousedown', handleClickOutside);
+      // Add class to body to prevent scrolling
+      document.body.classList.add('no-scroll');
       
-      // Additional scroll position verification
-      const verifyScrollPosition = () => {
-        const currentScroll = window.scrollY;
-        console.log(`TestimonialPopup: Current scroll position: ${currentScroll}`);
-        
-        // If body is in fixed position mode, we're good
-        if (document.body.style.position === 'fixed') {
-          console.log('TestimonialPopup: Body is in fixed position mode - scroll locked');
+      // Restore scroll position if it changed
+      setTimeout(() => {
+        if (window.scrollY !== scrollY) {
+          console.log('Restoring scroll position in popup:', scrollY);
+          window.scrollTo(0, scrollY);
         }
-      };
-      
-      verifyScrollPosition();
-      setTimeout(verifyScrollPosition, 50);
+      }, 10);
     }
 
     return () => {
-      console.log('TestimonialPopup: Cleaning up');
       document.removeEventListener('mousedown', handleClickOutside);
+      document.body.classList.remove('no-scroll');
     };
   }, [isOpen, onClose]);
 
