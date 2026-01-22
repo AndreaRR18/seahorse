@@ -119,6 +119,9 @@
 .author {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .authorName {
@@ -126,6 +129,30 @@
   color: var(--color-primary);
   font-size: var(--font-size-md);
   line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.readMoreButton {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  padding: var(--spacing-xs) 0;
+  transition: all var(--transition-normal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.readMoreButton:hover {
+  color: var(--color-primary);
+  text-decoration-thickness: 2px;
+}
+
+.readMoreButton:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .consent {

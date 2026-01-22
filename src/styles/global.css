@@ -46,6 +46,12 @@ button {
 }
 
 /* Utility Classes */
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 .container {
   width: 100%;
   max-width: var(--container-max-width);
