@@ -24,21 +24,9 @@ const TestimonialPopup: React.FC<TestimonialPopupProps> = ({
     };
 
     if (isOpen) {
-      // Store scroll position before adding no-scroll class
-      const scrollY = window.scrollY;
-      console.log('Popup opened, storing scroll position:', scrollY);
-      
       document.addEventListener('mousedown', handleClickOutside);
       // Add class to body to prevent scrolling
       document.body.classList.add('no-scroll');
-      
-      // Restore scroll position if it changed
-      setTimeout(() => {
-        if (window.scrollY !== scrollY) {
-          console.log('Restoring scroll position in popup:', scrollY);
-          window.scrollTo(0, scrollY);
-        }
-      }, 10);
     }
 
     return () => {
