@@ -84,15 +84,33 @@ Components use CSS Modules for scoped styling:
 
 ```
 src/styles/
-├── variables.css           # Design tokens
-├── global.css             # Global resets and utilities
-├── typography.css         # Typography styles
-└── components/            # Component-specific styles
+├── variables.css           # Design tokens — the authority
+├── global.css              # Reset, base elements, .container
+├── typography.css          # Heading scale, fluid type
+└── components/             # One module per component
+    ├── About.module.css
     ├── Button.module.css
     ├── Card.module.css
+    ├── Contact.module.css
+    ├── ContactForm.module.css
+    ├── FloatingActionButton.module.css
+    ├── Footer.module.css
+    ├── Gallery.module.css
     ├── Header.module.css
-    └── ...
+    ├── Hero.module.css
+    ├── Location.module.css
+    ├── Navigation.module.css
+    ├── Schedule.module.css
+    ├── SectionContainer.module.css
+    ├── Services.module.css
+    ├── TestimonialPopup.module.css
+    ├── Testimonials.module.css
+    └── Training.module.css
 ```
+
+`variables.css` is the single source of truth for every token. A value that
+appears in a module but not in `variables.css` is either a bug or a token
+that needs adding — never a one-off.
 
 ## Design Tokens Reference
 
@@ -251,9 +269,21 @@ Before any design goes live:
 
 ## Version & Maintenance
 
-**Design System Version**: 1.0.0
-**Last Updated**: 2024
+**Design System Version**: 1.1.0
+**Last Updated**: November 2026
+**Verified against**: `src/styles/variables.css` and the 18 CSS modules in
+`src/styles/components/`
 **Maintained by**: Development team
+
+### Known token gaps
+
+Two tokens are referenced in components but never defined in
+`variables.css`, so they resolve to nothing:
+
+- `--color-background-light` — used by `Gallery.tsx`
+- `--shadow-xl` — used by a component module
+
+Either define them or replace the references. Do not add a third.
 
 ### Change Process
 1. Propose change with reasoning

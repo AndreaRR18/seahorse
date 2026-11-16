@@ -54,7 +54,43 @@ Cavalluccio Marino is a family daycare (asilo nido famiglia) located in San Bern
 | `npm run lint` | Run ESLint to check code quality |
 | `npm run lint:fix` | Run ESLint and automatically fix issues |
 | `npm run type-check` | Run TypeScript type checker |
-| `npm run deploy` | Build and deploy to GitHub Pages |
+
+Deployment is automated — see [Deployment](#-deployment). There is no manual deploy script.
+
+## 🚀 Deployment
+
+The site deploys automatically to GitHub Pages on **every push to `main`** — which
+includes every merged pull request. Nothing to run locally.
+
+### How it works
+
+`.github/workflows/deploy.yml` runs on each push to `main` (and can be triggered
+manually from the Actions tab):
+
+```
+push to main
+  └── build job
+        ├── npm ci
+        ├── npm run lint      # fails the deploy on lint errors
+        ├── npm run build     # tsc + vite build → dist/
+        └── upload dist/ as the Pages artifact
+  └── deploy job
+        └── publish the artifact to GitHub Pages
+```
+
+Deploys are serialised: a second merge waits for the in-flight deploy to finish
+rather than cancelling it, so `main` is never left half-published.
+
+### One-time repository setup
+
+In **Settings → Pages**, set **Source** to **GitHub Actions**. The workflow also
+passes `enablement: true` to `actions/configure-pages`, so it can enable Pages on
+its first run if it is not configured yet.
+
+### Rolling back
+
+Re-run the workflow for an earlier commit from the **Actions** tab, or revert the
+commit on `main` — the revert deploys like any other merge.
 
 ## 📁 Project Structure
 
@@ -90,10 +126,13 @@ public/
 ├── assets/          # Static assets (images, favicon)
 ├── robots.txt       # Search engine crawling rules
 ├── sitemap.xml      # XML sitemap for search engines
-└── manifest.json    # PWA manifest
-
-CNAME                # Custom domain configuration (www.nido-cavallucciomarino.it)
+├── manifest.json    # PWA manifest
+└── CNAME            # Custom domain configuration (www.nido-cavallucciomarino.it)
 ```
+
+`public/` is copied verbatim into `dist/` at build time, so `public/CNAME` is what
+tells GitHub Pages which custom domain to serve. It must stay inside `public/` —
+a `CNAME` at the repository root is ignored by Actions-based deployments.
 
 ## 🎨 Features
 
@@ -197,8 +236,8 @@ nido-cavallucciomarino.it A 185.199.111.153
 
 - **Custom domain**: `www.nido-cavallucciomarino.it`
 - **HTTPS**: Enabled (automatic certificate provisioning)
-- **Source**: GitHub Actions or `gh-pages` branch
-- **Build**: Vite + TypeScript production build
+- **Source**: GitHub Actions (`.github/workflows/deploy.yml`)
+- **Build**: Vite + TypeScript production build, run in CI on every push to `main`
 
 ### Website Structure
 
