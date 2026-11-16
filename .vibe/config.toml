@@ -1,0 +1,11 @@
+# Vibe project configuration
+#
+# Mistral Vibe reads this file when the repository is a trusted folder.
+# It exists so Vibe and Claude Code share one copy of each skill.
+
+# Claude Code's native skill directory. Vibe reads it from here instead of
+# keeping a duplicate under .vibe/skills/.
+#
+# The path is relative to the working directory, so launch Vibe from the
+# repository root.
+skill_paths = [".claude/skills"]

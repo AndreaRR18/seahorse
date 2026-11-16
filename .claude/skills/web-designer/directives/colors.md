@@ -146,6 +146,13 @@ The Cavalluccio Marino color palette uses soft pastels to create a warm, nurturi
 ```
 **Use**: Image overlays, modal backdrops
 
+### Undefined but referenced
+
+`--color-background-light` is used by `Gallery.tsx` as a section background
+but is not declared in `variables.css`. It resolves to nothing, so the
+section falls back to transparent. Use `--color-background` (`#F9FAFB`)
+instead, or declare the token.
+
 ## Color Usage Guidelines
 
 ### Text Hierarchy
