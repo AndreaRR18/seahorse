@@ -42,7 +42,7 @@ const Header: React.FC = () => {
             className={styles.logo}
             onClick={closeMobileMenu}
           >
-            <h1 className={styles.logoText}>{SITE_INFO.name}</h1>
+            <span className={styles.logoText}>{SITE_INFO.name}</span>
           </Link>
 
           <div className={styles.desktopNav}>

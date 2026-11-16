@@ -11,6 +11,7 @@ import Schedule from './components/sections/Schedule';
 import Contact from './components/sections/Contact';
 import Location from './components/sections/Location';
 import FloatingActionButton from './components/ui/FloatingActionButton';
+import StructuredData from './components/seo/StructuredData';
 import './App.css';
 
 /**
@@ -21,6 +22,7 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <div className="app">
+      <StructuredData />
       <Header />
       <main>
         <Hero />
