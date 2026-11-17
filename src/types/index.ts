@@ -127,3 +127,9 @@ export interface GalleryImage {
   src: string;
   alt: string;
 }
+
+// Privacy Policy Types
+export interface PrivacySection {
+  title: string;
+  paragraphs: string[];
+}

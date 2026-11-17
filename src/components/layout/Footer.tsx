@@ -47,6 +47,11 @@ const Footer: React.FC = () => {
           <p className={styles.copyrightTagline}>Un progetto nato con amore</p>
           <p>&copy; {SITE_INFO.year} {SITE_INFO.name}</p>
           <p className={styles.copyrightSlogan}>Dove i piccoli diventano grandi sognatori</p>
+          <p>
+            <a href="/privacy.html" className={styles.privacyLink}>
+              Informativa sulla privacy
+            </a>
+          </p>
         </div>
       </div>
     </footer>

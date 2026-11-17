@@ -9,6 +9,7 @@ import type {
   Testimonial,
   TrainingArea,
   GalleryImage,
+  PrivacySection,
 } from "../types";
 
 export const CONTACT_INFO: ContactInfo = {
@@ -289,5 +290,101 @@ export const GALLERY_IMAGES: readonly GalleryImage[] = [
   {
     src: "/assets/tata_baby_hand_color.jpeg",
     alt: "Mani colorate durante attività creative",
+  },
+] as const;
+
+export const PRIVACY_LAST_UPDATED = "16 novembre 2026";
+
+const PRIVACY_ADDRESS = `${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.zip} ${CONTACT_INFO.address.city} (${CONTACT_INFO.address.province}), ${CONTACT_INFO.address.country}`;
+
+export const PRIVACY_INTRO = `Questa informativa descrive come ${SITE_INFO.name} tratta i dati personali delle persone che visitano il sito e che ci contattano, ai sensi dell'articolo 13 del Regolamento (UE) 2016/679 (GDPR).`;
+
+export const PRIVACY_POLICY: readonly PrivacySection[] = [
+  {
+    title: "Titolare del trattamento",
+    paragraphs: [
+      `Il titolare del trattamento è Serena Massarani, ${PRIVACY_ADDRESS}.`,
+      `Per qualsiasi richiesta relativa ai tuoi dati personali o a questa informativa puoi scrivere a ${CONTACT_INFO.email} oppure telefonare al ${CONTACT_INFO.phoneDisplay}.`,
+    ],
+  },
+  {
+    title: "Quali dati trattiamo",
+    paragraphs: [
+      "Dati di navigazione: quando visiti il sito, il servizio che lo ospita registra automaticamente l'indirizzo IP del tuo dispositivo, insieme a data, ora e pagina richiesta. Non usiamo questi dati per identificarti.",
+      "Dati che ci invii: quando ci contatti tramite il modulo, WhatsApp, telefono o email, trattiamo i dati che scegli di condividere, cioè il tuo nome, il messaggio e, se li indichi, l'indirizzo email e il numero di telefono. Se ci scrivi su WhatsApp riceviamo anche il numero e il nome del tuo profilo.",
+      "Ti chiediamo di non scrivere nel messaggio informazioni sulla salute tua o di tuo figlio: per un primo contatto bastano poche indicazioni, come l'età del bambino e il periodo di inserimento che ti interessa.",
+      "Il sito non installa cookie propri, non utilizza strumenti di analisi statistica e non profila i visitatori.",
+    ],
+  },
+  {
+    title: "Finalità e base giuridica",
+    paragraphs: [
+      "I dati che ci invii sono trattati per rispondere alla tua richiesta di informazioni e, se lo desideri, organizzare una visita. La base giuridica è l'esecuzione di misure precontrattuali adottate su tua richiesta (art. 6, par. 1, lett. b, GDPR).",
+      "I dati di navigazione sono trattati per garantire la sicurezza e il funzionamento del sito. La base giuridica è il legittimo interesse a mantenere il sito sicuro (art. 6, par. 1, lett. f, GDPR).",
+      "La mappa di Google nella sezione «Dove Siamo» viene caricata solo dopo un tuo clic esplicito. In quel caso la base giuridica è il tuo consenso (art. 6, par. 1, lett. a, GDPR e art. 122 del Codice privacy). Puoi revocarlo in qualsiasi momento ricaricando la pagina e cancellando i cookie di Google dalle impostazioni del browser.",
+    ],
+  },
+  {
+    title: "Come viaggiano i tuoi dati",
+    paragraphs: [
+      "Il sito è ospitato su GitHub Pages, un servizio di GitHub, Inc. È GitHub a registrare i dati di navigazione descritti sopra.",
+      "Il modulo di contatto non invia i dati a un server del sito. Compilando i campi e premendo «Invia Messaggio», il sito apre WhatsApp con un messaggio già composto: sei tu a decidere se inviarlo.",
+      "Se preferisci non utilizzare WhatsApp, puoi contattarci per telefono o email usando i recapiti indicati in questa pagina.",
+      "Il sito contiene un link alla nostra pagina Facebook. Il link da solo non trasmette dati a Facebook: se lo apri, lasci il sito e si applica l'informativa privacy di Meta.",
+    ],
+  },
+  {
+    title: "Destinatari",
+    paragraphs: [
+      "I tuoi dati sono accessibili a Serena Massarani in qualità di titolare del trattamento. Non sono ceduti né venduti a terzi.",
+      "Alcuni servizi esterni trattano i dati come titolari autonomi, secondo le proprie condizioni e la propria informativa privacy: GitHub, Inc., che ospita il sito; WhatsApp Ireland Limited, se ci scrivi su WhatsApp; Google Ireland Limited, se scegli di caricare la mappa.",
+      "Per la sola raccolta dei dati attraverso la mappa incorporata nel sito, Serena Massarani e Google sono contitolari del trattamento. Ogni trattamento successivo è di competenza esclusiva di Google.",
+    ],
+  },
+  {
+    title: "Trasferimento verso paesi extra UE",
+    paragraphs: [
+      "GitHub, WhatsApp e Google appartengono a gruppi con sede negli Stati Uniti d'America e possono trattare i dati anche lì. GitHub, Inc., Meta Platforms, Inc. e Google LLC aderiscono all'EU-US Data Privacy Framework, riconosciuto adeguato dalla Commissione europea con la decisione del 10 luglio 2023. Per i dettagli rimandiamo alle informative privacy dei singoli servizi.",
+    ],
+  },
+  {
+    title: "Periodo di conservazione",
+    paragraphs: [
+      "I messaggi ricevuti sono conservati per 12 mesi dalla data dell'ultimo contatto, poi cancellati.",
+      "I dati di navigazione sono conservati da GitHub per il tempo indicato nella sua informativa privacy.",
+    ],
+  },
+  {
+    title: "I tuoi diritti",
+    paragraphs: [
+      "Puoi chiedere in ogni momento l'accesso ai tuoi dati, la rettifica, la cancellazione, la limitazione del trattamento e la portabilità, e puoi opporti al trattamento basato sul legittimo interesse (artt. 15-22 GDPR).",
+      "Quando il trattamento si basa sul consenso, puoi revocarlo in qualsiasi momento. La revoca non rende illecito il trattamento svolto prima.",
+      `Per esercitare questi diritti scrivi a ${CONTACT_INFO.email}. Risponderemo entro un mese dalla richiesta.`,
+      "Se ritieni che il trattamento violi la normativa, puoi proporre reclamo al Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Roma — www.garanteprivacy.it.",
+    ],
+  },
+  {
+    title: "Conferimento dei dati",
+    paragraphs: [
+      "Il conferimento dei dati è facoltativo. Per rispondere alla tua richiesta ci servono però almeno il tuo nome e il messaggio; email e telefono sono facoltativi.",
+    ],
+  },
+  {
+    title: "Iscrizione al nido",
+    paragraphs: [
+      "Questa informativa riguarda solo il sito e i primi contatti. Se decidi di iscrivere tuo figlio, i dati della famiglia e del bambino, compresi quelli sulla salute necessari alla sua cura, sono trattati secondo un'informativa specifica che ti viene consegnata al momento dell'iscrizione.",
+    ],
+  },
+  {
+    title: "Processi decisionali automatizzati",
+    paragraphs: [
+      "Non utilizziamo processi decisionali automatizzati né attività di profilazione.",
+    ],
+  },
+  {
+    title: "Modifiche a questa informativa",
+    paragraphs: [
+      "Se dovesse cambiare il modo in cui trattiamo i dati, aggiorneremo questa pagina e la data di ultimo aggiornamento indicata in alto.",
+    ],
   },
 ] as const;

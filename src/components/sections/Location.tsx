@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionContainer from '../ui/SectionContainer';
+import Button from '../ui/Button';
 import { CONTACT_INFO } from '../../utils/constants';
 import styles from '../../styles/components/Location.module.css';
 
 /**
  * Location component - Displays daycare address and map
- * Shows physical address and embedded Google Maps
+ * Shows physical address and a Google Maps embed loaded only after consent
  * @returns React component for location section
  */
 const Location: React.FC = () => {
+  const [mapLoaded, setMapLoaded] = useState<boolean>(false);
+
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     `${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}, Italy`
   )}&output=embed`;
@@ -27,16 +30,28 @@ const Location: React.FC = () => {
         </p>
 
         <div className={styles.mapContainer}>
-          <iframe
-            title="Cavalluccio Marino Location"
-            src={mapSrc}
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          {mapLoaded ? (
+            <iframe
+              title="Cavalluccio Marino Location"
+              src={mapSrc}
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          ) : (
+            <div className={styles.mapPlaceholder}>
+              <p className={styles.mapPlaceholderText}>
+                La mappa è fornita da Google. Caricandola, Google potrà installare cookie
+                e ricevere il tuo indirizzo IP.
+              </p>
+              <Button variant="primary" onClick={() => setMapLoaded(true)}>
+                Carica la mappa
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </SectionContainer>
