@@ -1,0 +1,70 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+.header {
+  background-color: var(--color-primary);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+}
+
+.title {
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.updated {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-dark);
+}
+
+.main {
+  padding: var(--spacing-xl) 0 var(--spacing-2xl);
+}
+
+.intro {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-dark);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.paragraph {
+  color: var(--color-text-light);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-sm);
+}
+
+.backLinkBottom {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  color: var(--color-text-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+}
+
+.backLink:hover,
+.backLinkBottom:hover {
+  color: var(--color-text-dark);
+  text-decoration: none;
+}

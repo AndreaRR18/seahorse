@@ -27,15 +27,15 @@ const ContactForm: React.FC = () => {
       newErrors.name = 'Il nome deve contenere almeno 2 caratteri';
     }
 
-    // Email validation
+    // Email validation (optional field, checked only when filled)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim() || !emailRegex.test(formData.email)) {
+    if (formData.email.trim() && !emailRegex.test(formData.email.trim())) {
       newErrors.email = 'Inserisci un indirizzo email valido';
     }
 
-    // Phone validation (Italian format)
+    // Phone validation (optional field, checked only when filled)
     const phoneRegex = /^[\d\s+\-()]{8,}$/;
-    if (!formData.phone.trim() || !phoneRegex.test(formData.phone)) {
+    if (formData.phone.trim() && !phoneRegex.test(formData.phone.trim())) {
       newErrors.phone = 'Inserisci un numero di telefono valido';
     }
 
@@ -68,7 +68,9 @@ const ContactForm: React.FC = () => {
 
     if (validateForm()) {
       // Since no backend, create WhatsApp link with pre-filled message
-      const message = `Ciao! Sono ${formData.name}. ${formData.message}. Puoi contattarmi a: ${formData.email} o ${formData.phone}`;
+      const contacts = [formData.email.trim(), formData.phone.trim()].filter(Boolean);
+      const contactLine = contacts.length > 0 ? ` Puoi contattarmi a: ${contacts.join(' o ')}` : '';
+      const message = `Ciao! Sono ${formData.name}. ${formData.message}.${contactLine}`;
       const whatsappUrl = `${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappUrl, '_blank');
@@ -114,7 +116,7 @@ const ContactForm: React.FC = () => {
       <div className={styles.formRow}>
         <div className={styles.formGroup}>
           <label htmlFor="email" className={styles.label}>
-            Email *
+            Email
           </label>
           <input
             type="email"
@@ -124,7 +126,6 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
             placeholder="tua@email.com"
-            aria-required="true"
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
@@ -137,7 +138,7 @@ const ContactForm: React.FC = () => {
 
         <div className={styles.formGroup}>
           <label htmlFor="phone" className={styles.label}>
-            Telefono *
+            Telefono
           </label>
           <input
             type="tel"
@@ -147,7 +148,6 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className={`${styles.input} ${errors.phone ? styles.inputError : ''}`}
             placeholder={CONTACT_INFO.phoneDisplay}
-            aria-required="true"
             aria-invalid={!!errors.phone}
             aria-describedby={errors.phone ? 'phone-error' : undefined}
           />
@@ -182,13 +182,18 @@ const ContactForm: React.FC = () => {
         )}
       </div>
 
+      <p className={styles.privacyNote}>
+        * Campi obbligatori. Premendo «Invia Messaggio» si apre WhatsApp con il messaggio
+        già composto: i dati che inserisci saranno trattati da Serena Massarani per
+        rispondere alla tua richiesta.{' '}
+        <a href="/privacy.html" className={styles.privacyLink}>
+          Informativa sulla privacy
+        </a>
+      </p>
+
       <Button type="submit" variant="primary" size="large">
         Invia Messaggio
       </Button>
-
-      <p className={styles.privacyNote}>
-        * Campi obbligatori. I tuoi dati saranno trattati nel rispetto della privacy.
-      </p>
     </form>
   );
 };

@@ -97,3 +97,13 @@
   color: var(--color-primary);
   margin-top: var(--spacing-xs);
 }
+
+.privacyLink {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  text-decoration: underline;
+}
+
+.privacyLink:hover {
+  color: var(--color-primary);
+}

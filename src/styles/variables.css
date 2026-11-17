@@ -54,6 +54,7 @@
   /* Layout */
   --container-max-width: 1200px;
   --header-height: 80px;
+  --map-height: 450px;
 
   /* Transitions */
   --transition-fast: 0.2s ease;
